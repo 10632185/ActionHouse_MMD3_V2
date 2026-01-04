@@ -51,8 +51,34 @@ const tilbudspakker = [
     "Lux VR Action pakke(24min VR, 25min Gokart, 20min Lasergame)"
 ]
 
-// checkbox visning
+const valgtAktivitet = ref([])
+const aktiviteter = [
+  "Bowling",
+  "10min Gokart",
+  "15min Gokart",
+  "Formel 1(gokart 25min)",
+  "Lux Formel 1(gokart 50min)",
+  "12min Lasergame",
+  "20min Lasergame",
+  "30min Lasergame",
+  "Legeland",
+  "30min skydesimulator",
+  "60min skydesimulator",
+  "12min Virtuel reality (min 12 år)",
+  "24min Virtuel reality (min 12 år)"
+]
 
+const valgtSpiseOpt = ref([])
+const spiseOpt = [
+  "forret",
+  "hovedret",
+  "buffet",
+  "frisoftice til buffet",
+  "dessert"
+]
+
+// checkbox visning
+const visAktivitet = ref(false)
 const visTilbud = ref(false)
 </script>
 
@@ -112,22 +138,53 @@ const visTilbud = ref(false)
     <!-- Step 3 -->
     <div class="step" v-if="step === 3">
       <h2>Valg af Aktivitet</h2>
-      <div class="checkboxContainer">    
-              <label for="vælgTilbudspakker">tilbudspakker</label>
-              <input type="checkbox" id="vælgTilbudspakke" v-model="visTilbud">
-              <br>
-              <select v-if="visTilbud" name="vælgTilbudspakker" id="vælgTilbudspakker" v-model="valgtTilbud">
-                <option disabled value="">Vælg et tilbud</option>
-                <option v-for="tilbudspakke in tilbudspakker" :key="tilbudspakke" value="tilbudspakke">{{ tilbudspakke }}</option>
-              </select>
-              
-              <label for="vælgAktiviteter">Aktiviteter</label>
-              <input type="checkbox" id="vælgAktivitet">     
+      <div class="checkboxContainer">
+        <div>
+          <label for="vælgTilbudspakker">tilbudspakker</label>
+          <input type="checkbox" id="vælgTilbudspakke" v-model="visTilbud">
+          <br>
+          <br>
+          <select v-if="visTilbud" name="vælgTilbudspakker" id="vælgTilbudspakker" v-model="valgtTilbud">
+            <option disabled value="">Vælg et tilbud</option>
+            <option v-for="tilbudspakke in tilbudspakker" :key="tilbudspakke" value="tilbudspakke">{{ tilbudspakke }}</option>
+          </select>
+        </div>
+        <div> 
+          <label for="vælgAktiviteter">Aktiviteter</label>
+          <!-- Checkbox der viser/skjuler listen --> 
+          <input type="checkbox" id="vælgAktivitet" v-model="visAktivitet">
+          <!-- Liste over aktiviteter --> 
+          <div v-if="visAktivitet"> 
+            <div v-for="aktivitet in aktiviteter" :key="aktivitet">
+            <input type="checkbox" :id="aktivitet" :value="aktivitet" v-model="valgtAktivitet" > 
+            <label :for="aktivitet">{{ aktivitet }}</label> 
+          </div> 
+        </div> 
+      </div>
       </div>
     <div>
         <button @click="prevStep">Tilbage</button>
         <button @click="nextStep">næste</button>
     </div>
+    </div>
+    <div class="step" v-if="step === 4">
+      <h2>Spisning</h2>
+      <div class="spisningContainer">
+        <div v-for="food in spiseOpt" :key="food" class="foodContainer">
+          <input type="Checkbox" :id="food" :value="food" v-model="valgtSpiseOpt">
+          <label :for="food">{{ food }}</label>
+        </div>
+      </div>
+      <div>
+        <button @click="prevStep">tilbage</button>
+        <button @click="nextStep">Næste</button>
+      </div>
+    </div>
+    <div class="step" v-if="step === 5">
+      <div>
+        <button @click="prevStep">tilbage</button>
+        <button @click="nextStep">næste</button>
+      </div>
     </div>
  </div>
 </template>
@@ -136,7 +193,6 @@ const visTilbud = ref(false)
 .steps {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
   justify-content: space-evenly;
 }
 .steps span {
@@ -163,7 +219,8 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 450px;
+    margin-left: 350px;
+    margin-right: 350px;
 }
 .step button{
     width: 100px;
@@ -172,16 +229,53 @@ input{
     margin: 1rem;
 }
 
-.checkboxContainer{
-    display: flex;
+
+
+.checkboxContainer { 
+  display: flex;
+  gap: 15px; 
+  padding: 20px; 
+  justify-content: space-between;
+  
 }
 
-.checkboxContainer div{
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.checkboxContainer input[type="checkbox"] { 
+  margin-right: 10px;  
+  width: 50px;
+  } 
+    
+.checkboxContainer select { 
+  padding: 10px 12px; 
+  background: white; 
+  font-size: 15px; 
+} 
+.spisningContainer { 
+  display: flex;
+  gap: 15px; 
+  padding: 20px; 
+  justify-content: space-evenly;
+  flex-direction: column;
+  
 }
+
+
+.spisningContainer input[type="checkbox"] { 
+  margin-right: 10px;  
+  width: 50px;
+  } 
+    
+.spisningContainer select { 
+  padding: 10px 12px; 
+  background: white; 
+  font-size: 15px; 
+} 
+
+      
+
+
+
+
 
 
 
