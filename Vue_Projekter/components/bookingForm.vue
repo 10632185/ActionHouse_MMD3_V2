@@ -13,16 +13,17 @@ const formData = ref({
     date: '',
     time:'',
     antalDeltagere: '',
-
 })
 
 
 
 // navigere steps
+// via en if statement kan funktionen læse hvad værdien den span den står på har og hvis den værdi er mindre en syv kan den ligge en tal oven i og navigere videre til den den næste span som har en value der er en højere. den skal ikke kunne gå over 7 fordi der ikke er flere steps i booking formularen
 const nextStep = () => {
-    if (step.value < 5) step.value++
+    if (step.value < 7) step.value++
 }
 
+// samme som funktionen oven over ved at en if statement kan den læse valuen af den span den står på og hvis værdien er højere end 1 kan trække et tal fra og på den måde navigere en span tilbage vha. at læse den næste spans value
 const prevStep = () => {
     if (step.value > 1) step.value--
 }
@@ -33,7 +34,8 @@ const sumbitForm = () => {
 }
 
 // dropdown til tilbudspakker
-const valgtTilbud = ref("")
+const valgtTilbud = ref("") 
+
 const tilbudspakker = [
     "Action (10min Gokart, 12min Lasergame, 57min Bowling)",
     "Lux Action(25min Gokart, 20min Lasergame, 57min Bowling)",
@@ -51,7 +53,9 @@ const tilbudspakker = [
     "Lux VR Action pakke(24min VR, 25min Gokart, 20min Lasergame)"
 ]
 
-const valgtAktivitet = ref([])
+// liste over aktiviteter
+const valgtAktivitet = ref([]) 
+
 const aktiviteter = [
   "Bowling",
   "10min Gokart",
@@ -67,8 +71,9 @@ const aktiviteter = [
   "12min Virtuel reality (min 12 år)",
   "24min Virtuel reality (min 12 år)"
 ]
+// liste over spisemuligheder
+const valgtSpiseOpt = ref([]) 
 
-const valgtSpiseOpt = ref([])
 const spiseOpt = [
   "forret",
   "hovedret",
@@ -77,24 +82,44 @@ const spiseOpt = [
   "dessert"
 ]
 
-// checkbox visning
+// list over steder folk kan have hørt om action house
+const valgtLokation = ref([])
+
+const lokationer = [
+  "Google",
+  "Facebook",
+  "Instagram",
+  "Youtube",
+  "TikTok",
+  "Radio",
+  "Familie/Venner/Kollegaer",
+  "Avis",
+  "Internettet",
+  "løkken.dk",
+  "blokhus.dk",
+  "visit Nordvestkysten",
+  "tv"
+]
+
+// dette er variabler som søger for at det indhold der ligger inde i checkbox div'en ikke bliver vist med mindre man chekker boxen af i grænsefalden. 
 const visAktivitet = ref(false)
 const visTilbud = ref(false)
 </script>
 
 <template>
  <div class="booking-form">
-
-    <!-- dette er en progress bar, den virker på den måde at du har en span med class det svarer til et step i booking formularen, ved at indlæse det index man er inde på. når du er inde på et step i booking formularen får det en active class, og på den måde kan identifiecere hvilket step der skal fremvises på grænsefladen -->
+<!-- dette er vores progress bar som fungere på den måde at du har en span med active class. hver span har fået tildelt en value som kan bruges til at navigere imellem de andre spans, via deres value som forklaret i funktionerne oven over. -->
     <div class="steps">
       <span :class="{ active: step === 1 }">1</span>
       <span :class="{ active: step === 2 }">2</span>
       <span :class="{ active: step === 3 }">3</span>
       <span :class="{ active: step === 4 }">4</span>
       <span :class="{ active: step === 5 }">5</span>
+      <span :class="{ active: step === 6 }">6</span>
+      <span :class="{ active: step === 7 }">7</span>
     </div>
 
-    <!-- Step 1 -->
+    <!-- Step 1 person oplysninger-->
     <div class="step" v-if="step === 1">
       <h2>Person Oplysninger</h2>
       <label for="fornavn">Fornavn</label>
@@ -115,7 +140,7 @@ const visTilbud = ref(false)
       <button @click="nextStep">Næste</button>
     </div>
 
-    <!-- Step 2 -->
+    <!-- Step 2 dato og tid-->
     <div class="step" v-if="step === 2">
       <h2>Dato og Tid</h2>
       <label for="dato">Dato</label>
@@ -135,7 +160,7 @@ const visTilbud = ref(false)
       </div>
     </div>
 
-    <!-- Step 3 -->
+    <!-- Step 3 vælg aktiviteter-->
     <div class="step" v-if="step === 3">
       <h2>Valg af Aktivitet</h2>
       <div class="checkboxContainer">
@@ -146,7 +171,7 @@ const visTilbud = ref(false)
           <br>
           <select v-if="visTilbud" name="vælgTilbudspakker" id="vælgTilbudspakker" v-model="valgtTilbud">
             <option disabled value="">Vælg et tilbud</option>
-            <option v-for="tilbudspakke in tilbudspakker" :key="tilbudspakke" value="tilbudspakke">{{ tilbudspakke }}</option>
+            <option v-for="tilbudspakke in tilbudspakker" :key="tilbudspakke" >{{ tilbudspakke }}</option>
           </select>
         </div>
         <div> 
@@ -156,7 +181,7 @@ const visTilbud = ref(false)
           <!-- Liste over aktiviteter --> 
           <div v-if="visAktivitet"> 
             <div v-for="aktivitet in aktiviteter" :key="aktivitet">
-            <input type="checkbox" :id="aktivitet" :value="aktivitet" v-model="valgtAktivitet" > 
+            <input type="checkbox" :id="aktivitet" v-model="valgtAktivitet" > 
             <label :for="aktivitet">{{ aktivitet }}</label> 
           </div> 
         </div> 
@@ -167,11 +192,12 @@ const visTilbud = ref(false)
         <button @click="nextStep">næste</button>
     </div>
     </div>
+    <!-- step 4 spisning-->
     <div class="step" v-if="step === 4">
       <h2>Spisning</h2>
       <div class="spisningContainer">
         <div v-for="food in spiseOpt" :key="food" class="foodContainer">
-          <input type="Checkbox" :id="food" :value="food" v-model="valgtSpiseOpt">
+          <input type="Checkbox" :id="food" v-model="valgtSpiseOpt">
           <label :for="food">{{ food }}</label>
         </div>
       </div>
@@ -180,13 +206,52 @@ const visTilbud = ref(false)
         <button @click="nextStep">Næste</button>
       </div>
     </div>
+    <!-- step 5 deltagerliste -->
     <div class="step" v-if="step === 5">
+      <h2>deltagerliste</h2>
+      <input type="text" class="deltagerListe">
       <div>
         <button @click="prevStep">tilbage</button>
         <button @click="nextStep">næste</button>
       </div>
     </div>
+    <div class="step" v-if="step === 6">
+      <h2>Hvor fik du inspiration til Booking</h2>
+      <div class="lokationContainer">
+        <div v-for="lokation in lokationer">
+          <input type="checkbox" :id="lokation"  v-model="valgtLokation">
+          <label :for="lokation">{{ lokation }}</label>
+        </div>
+      </div>
+      <div>
+        <button @click="prevStep">tilbage</button>
+        <button @click="nextStep">næste</button>
+      </div>
+    </div>
+    <div class="step" v-if="step === 7">
+      <h2>kommentarer</h2>
+      <div class="kommentarerContainer">
+        <input type="text">
+        <div>
+          <h3>tilmeld nyhedsbrev</h3>
+          <input type="checkbox">
+          <label for="nyhedsbrev">ja tak</label>
+        </div>
+        <div>
+          <h3>Persondata godkendelse</h3>
+          <p>Jeg godkender hermed at Action House Løkken må bruge de ovenfor indtastede oplysninger i forbindelse med booking af aktiviteter. Action House bruger udelukkende disse oplysninger for at kunne foretage en booking af valgte aktiviterer. Yderligere oplysninger kan findes i vores privatlivspolitik</p>
+          <input type="checkbox">
+          <label for="godkendelse">jeg godkender betingelserne</label>
+        </div>
+      </div>
+      <div>
+        <button @click="prevStep">tilbage</button>
+        <button @click="nextStep">Book</button>
+      </div>
+    </div>
  </div>
+
+ <!-- value="tilbudspakke"- value="lokation" - value="food" - value="aktivitet" -->
 </template>
 
 <style scoped>
@@ -211,7 +276,7 @@ const visTilbud = ref(false)
 }
 
 input{
-    width: 1000px;
+    max-width: 500px;
     height: 2rem;
 }
 
@@ -264,19 +329,33 @@ input{
   margin-right: 10px;  
   width: 50px;
   } 
-    
-.spisningContainer select { 
-  padding: 10px 12px; 
-  background: white; 
-  font-size: 15px; 
-} 
+ 
 
-      
+.deltagerListe{
+  padding-bottom: 200px;
+}
+
+.lokationContainer { 
+  display: flex;
+  gap: 15px; 
+  padding: 20px; 
+  justify-content: space-evenly;
+  flex-direction: column;
+  
+}
 
 
+.lokationContainer input[type="checkbox"] { 
+  margin-right: 10px;  
+  width: 50px;
+  } 
+  
 
+.kommentarerContainer input{
+  padding-right: 200px;
+  padding-bottom: 100px;
 
-
+}
 
 
 
