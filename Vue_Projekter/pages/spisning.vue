@@ -5,6 +5,7 @@
 <template>
     <section>
         <article class="foodIntro">
+            <img src="../assets/img/spisningHeader.png" alt="hero billede til spisning med buffet">
             <h1>Spisning</h1>
             <p>Hos Action House Funcenter kan I nyde lækker mad og forfriskninger midt i al actionen. Vores spisested er perfekt til at samle energi, hygge jer og fortsætte sjove oplevelser sammen - uanset om det er familie, venner eller kolleger.</p>
         </article>
@@ -97,6 +98,12 @@
 
     .foodIntro p{
         width: 70ch;
+    }
+
+    .foodIntro img{
+        width: 100vw;
+        height: 60vh;
+        object-fit: cover;
     }
 
     .menuContainer{

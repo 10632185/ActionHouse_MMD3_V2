@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 
 // steps
+// en variabel der viser hvilket step du er inde på og gemmer det indhold som ligger under hvert step
 const step = ref(1)
 
 // steps data
@@ -18,7 +19,7 @@ const formData = ref({
 
 
 // navigere steps
-// via en if statement kan funktionen læse hvad værdien den span den står på har og hvis den værdi er mindre en syv kan den ligge en tal oven i og navigere videre til den den næste span som har en value der er en højere. den skal ikke kunne gå over 7 fordi der ikke er flere steps i booking formularen
+// via en if statement kan funktionen læse hvad værdien den span den står på og hvis den værdi er mindre en syv kan den ligge et tal oven i og navigere videre til den den næste span som har en value der er en højere. den skal ikke kunne gå over 7 fordi der ikke er flere steps i booking formularen
 const nextStep = () => {
     if (step.value < 7) step.value++
 }
@@ -109,7 +110,7 @@ const visTilbud = ref(false)
 
 <template>
  <div class="booking-form">
-<!-- dette er vores progress bar som fungere på den måde at du har en span med active class. hver span har fået tildelt en value som kan bruges til at navigere imellem de andre spans, via deres value som forklaret i funktionerne oven over. -->
+<!-- dette er vores progress bar som fungere på den måde at du har en span med active class. hver span har fået tildelt en value det matcher med den div med samme value. der indholder det data som passer ind i den del af progress baren. det virker på den måde at den kan navigere imellem de andre spans, via deres value som forklaret i funktionerne oven over. hver span passer til et step i bookingformularen-->
     <div class="steps">
       <span :class="{ active: step === 1 }">1</span>
       <span :class="{ active: step === 2 }">2</span>
@@ -122,76 +123,82 @@ const visTilbud = ref(false)
 
     <!-- Step 1 person oplysninger-->
     <div class="step" v-if="step === 1">
-      <h2>Person Oplysninger</h2>
-      <label for="fornavn">Fornavn</label>
-      <br>
-      <input type="text" placeholder="fornavn" v-model="formData.name" />
-      <br>
-      <label for="efternavn">Efternavn</label>
-      <br>
-      <input type="text" placeholder="efternavn" v-model="formData.lastName" />
-      <br>
-      <label for="Email">Email</label>
-      <br>
-      <input type="email" placeholder="ActionHouse@actionhouse.dk" v-model="formData.email">
-      <br>
-      <label for="telefon">Telefon nr</label>
-      <br>
-      <input type="tel" placeholder="+45 00 00 00 00" v-model="formData.tel">
-      <button @click="nextStep">Næste</button>
+      <div class="personoplysninger">
+        <h2>Person Oplysninger</h2>
+        <label for="fornavn">Fornavn</label>
+        <br>
+        <input type="text" placeholder="fornavn" v-model="formData.name" />
+        <br>
+        <label for="efternavn">Efternavn</label>
+        <br>
+        <input type="text" placeholder="efternavn" v-model="formData.lastName" />
+        <br>
+        <label for="Email">Email</label>
+        <br>
+        <input type="email" placeholder="ActionHouse@actionhouse.dk" v-model="formData.email">
+        <br>
+        <label for="telefon">Telefon nr</label>
+        <br>
+        <input type="tel" placeholder="+45 00 00 00 00" v-model="formData.tel">
+        <button @click="nextStep">Næste</button>
+      </div>
     </div>
 
     <!-- Step 2 dato og tid-->
     <div class="step" v-if="step === 2">
-      <h2>Dato og Tid</h2>
-      <label for="dato">Dato</label>
-      <br>
-      <input type="date" v-model="formData.date">
-      <br>
-      <label for="time">Tidspunkt</label>
-      <br>
-      <input type="time" v-model="formData.time">
-      <br>
-      <label for="Deltager">Antal Deltager</label>
-      <br>
-      <input type="text" v-model="formData.antalDeltagere">
-      <div>
-          <button @click="prevStep">Tilbage</button>
-          <button @click="nextStep">Næste</button>
+      <div class="datoOgTid">
+        <h2>Dato og Tid</h2>
+        <label for="dato">Dato</label>
+        <br>
+        <input type="date" v-model="formData.date">
+        <br>
+        <label for="time">Tidspunkt</label>
+        <br>
+        <input type="time" v-model="formData.time">
+        <br>
+        <label for="Deltager">Antal Deltager</label>
+        <br>
+        <input type="text" v-model="formData.antalDeltagere">
+        <div>
+            <button @click="prevStep">Tilbage</button>
+            <button @click="nextStep">Næste</button>
+        </div>
       </div>
     </div>
 
     <!-- Step 3 vælg aktiviteter-->
     <div class="step" v-if="step === 3">
-      <h2>Valg af Aktivitet</h2>
-      <div class="checkboxContainer">
-        <div>
-          <label for="vælgTilbudspakker">tilbudspakker</label>
-          <input type="checkbox" id="vælgTilbudspakke" v-model="visTilbud">
-          <br>
-          <br>
-          <select v-if="visTilbud" name="vælgTilbudspakker" id="vælgTilbudspakker" v-model="valgtTilbud">
-            <option disabled value="">Vælg et tilbud</option>
-            <option v-for="tilbudspakke in tilbudspakker" :key="tilbudspakke" >{{ tilbudspakke }}</option>
-          </select>
-        </div>
-        <div> 
-          <label for="vælgAktiviteter">Aktiviteter</label>
-          <!-- Checkbox der viser/skjuler listen --> 
-          <input type="checkbox" id="vælgAktivitet" v-model="visAktivitet">
-          <!-- Liste over aktiviteter --> 
-          <div v-if="visAktivitet"> 
-            <div v-for="aktivitet in aktiviteter" :key="aktivitet">
-            <input type="checkbox" :id="aktivitet" v-model="valgtAktivitet" > 
-            <label :for="aktivitet">{{ aktivitet }}</label> 
+      <div>
+        <h2>Valg af Aktivitet</h2>
+        <div class="checkboxContainer">
+          <div>
+            <label for="vælgTilbudspakker">tilbudspakker</label>
+            <input type="checkbox" id="vælgTilbudspakke" v-model="visTilbud">
+            <br>
+            <br>
+            <select v-if="visTilbud" name="vælgTilbudspakker" id="vælgTilbudspakker" v-model="valgtTilbud">
+              <option disabled value="">Vælg et tilbud</option>
+              <option v-for="tilbudspakke in tilbudspakker" :key="tilbudspakke" >{{ tilbudspakke }}</option>
+            </select>
+          </div>
+          <div> 
+            <label for="vælgAktiviteter">Aktiviteter</label>
+            <!-- Checkbox der viser/skjuler listen --> 
+            <input type="checkbox" id="vælgAktivitet" v-model="visAktivitet">
+            <!-- Liste over aktiviteter --> 
+            <div v-if="visAktivitet"> 
+              <div v-for="aktivitet in aktiviteter" :key="aktivitet">
+              <input type="checkbox" :id="aktivitet" v-model="valgtAktivitet" > 
+              <label :for="aktivitet">{{ aktivitet }}</label> 
+            </div> 
           </div> 
-        </div> 
+        </div>
+        </div>
+      <div>
+          <button @click="prevStep">Tilbage</button>
+          <button @click="nextStep">næste</button>
       </div>
       </div>
-    <div>
-        <button @click="prevStep">Tilbage</button>
-        <button @click="nextStep">næste</button>
-    </div>
     </div>
     <!-- step 4 spisning-->
     <div class="step" v-if="step === 4">
@@ -220,7 +227,7 @@ const visTilbud = ref(false)
       <h2>Hvor fik du inspiration til Booking</h2>
       <div class="lokationContainer">
         <div v-for="lokation in lokationer">
-          <input type="checkbox" :id="lokation"  v-model="valgtLokation">
+          <input type="checkbox" class="lokationCheckbox" :id="lokation"  v-model="valgtLokation">
           <label :for="lokation">{{ lokation }}</label>
         </div>
       </div>
@@ -270,25 +277,49 @@ const visTilbud = ref(false)
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin-top: 2rem;
 }
 .steps .active {
   background: var(--mainblue);
   color: white;
 }
 
-input{
+input[type=text]{
     max-width: 500px;
+    min-width: 50px;
     height: 2rem;
+}
+input[type=email]{
+    max-width: 500px;
+    min-width: 50px;
+    height: 2rem;
+}
+input[type=tel]{
+    max-width: 500px;
+    min-width: 200px;
+    height: 2rem;
+}
+
+input[type=checkbox]{
+  transform: scale(1.8);
 }
 
 .step{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 350px;
-    margin-right: 350px;
+    align-items: center;
 }
+
+.personoplysninger{
+  display: flex;
+  flex-direction: column;
+}
+.datoOgTid{
+  display: flex;
+  flex-direction: column;
+}
+
 .step button{
     width: 100px;
     margin: 1rem;
@@ -302,6 +333,7 @@ button{
   border-radius: 5px;
   border-color: none;
   padding: 8px;
+  font-size: 1.2rem;
 }
 
 
@@ -315,7 +347,7 @@ button{
 
 .checkboxContainer input[type="checkbox"] { 
   margin-right: 10px;  
-  width: 50px;
+  border: 3px solid red;
   } 
     
 .checkboxContainer select { 
@@ -339,9 +371,10 @@ button{
   } 
  
 
-.deltagerListe{
-  padding-bottom: 200px;
-}
+/* .deltagerListe{
+  width: 300px;
+  height: 200px;
+} */
 
 .lokationContainer { 
   display: flex;
@@ -352,7 +385,7 @@ button{
 }
 
 
-.lokationContainer input[type="checkbox"] { 
+.lokationContainer .lokationCheckbox { 
   margin-right: 10px;  
   width: 50px;
   } 
@@ -372,6 +405,42 @@ button{
 .godkendContainer p{
   width: 50ch;
   font-size: 0.9rem;
+}
+
+
+@media (max-width: 400px) {
+
+  .steps span {
+  width: 40px;
+  height: 40px;
+}
+
+.step h2{
+  font-size: 1.5rem;
+}
+
+.lokationContainer{
+  justify-content: flex-start;
+}
+
+.lokationContainer label{
+  font-size: 0.9rem;
+}
+
+.lokationContainer .lokationCheckbox{
+  width: 100px;
+  margin: 0;
+}
+
+
+.step button{
+    width: 100px;
+    font-size: 1rem;
+    margin: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
 }
 
 </style>

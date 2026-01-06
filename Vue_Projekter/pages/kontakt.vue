@@ -60,6 +60,7 @@ h2{
 
 img{
     width: 100vw;
+    height: 70vh;
 }
 
 

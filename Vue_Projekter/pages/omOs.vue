@@ -13,6 +13,10 @@
 </template>
 
 <style scoped>
+template{
+    overflow: hidden;
+}
+
 .omOsContent{
     display: flex;
     flex-direction: column;
@@ -26,6 +30,7 @@ h1{
 }
 img{
     width: 100vw;
+    height: 70vh;
 }
 
 p{
