@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-
 const timeline = ref(1)
 
 const nextStep = () => {
@@ -10,7 +9,6 @@ const nextStep = () => {
 const prevStep = () => {
     if(timeline.value > 1) timeline.value--
 }
-
 
 </script>
 
@@ -112,7 +110,8 @@ h2{
 .timelineButton{
     display: flex;
     margin: 1rem;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .timelineButton button{

@@ -10,6 +10,8 @@
 <NuxtLink to="/test">Test</NuxtLink>
 <NuxtLink to="/booking">booking</NuxtLink>
 <NuxtLink to="/omOs">om os</NuxtLink>
+<NuxtLink to="/kontakt">kontakt</NuxtLink>
+
 
 </template>
  
