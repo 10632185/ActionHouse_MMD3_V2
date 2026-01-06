@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 // steps
-// en variabel der viser hvilket step du er inde på og gemmer det indhold som ligger under hvert step
+// en variabel der viser hvilket step du er inde på og gemmer det indhold som ligger under hvert step den er sat til 1 så den starter på det rigtige step. 
 const step = ref(1)
 
 // steps data
@@ -30,6 +30,7 @@ const prevStep = () => {
 }
 
 // submit form
+// en funktion der logger den data som bliver sat ind i formdata objektet med v-model og sender det ind i consolen. 
 const sumbitForm = () => {
     console.log("Din booking er nu insendt!", formData.vaule)
 }
@@ -122,6 +123,7 @@ const visTilbud = ref(false)
     </div>
 
     <!-- Step 1 person oplysninger-->
+    <!-- en if statement der gør at vis steps value er = 1 skal den render dette indhold -->
     <div class="step" v-if="step === 1">
       <div class="personoplysninger">
         <h2>Person Oplysninger</h2>
@@ -254,7 +256,7 @@ const visTilbud = ref(false)
       </div>
       <div>
         <button @click="prevStep">tilbage</button>
-        <button @click="nextStep">Book</button>
+        <button @click="sumbitForm">Book</button>
       </div>
     </div>
  </div>
