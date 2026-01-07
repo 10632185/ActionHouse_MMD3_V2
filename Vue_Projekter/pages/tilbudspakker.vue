@@ -36,7 +36,7 @@ const activeCategory = ref('all')
         <h2 class="h2Blue">Tilbud</h2>
         <div class="tilbudBooking">
         <p>Her finder du vores tilbudspakker, hvor flere af Action House Funcenters mest populære aktiviteter er samlet i én oplevelse. Pakkerne gør det nemt at planlægge en dag fyldt med action, sjov og fællesskab, uanset anledning.</p>
-        <button>Book nu</button>
+        <a href="/booking"><button>Book nu</button></a>
         </div>
     </section>
 
@@ -253,7 +253,6 @@ const activeCategory = ref('all')
       </article>
     </section>
 
-    <a href="/booking" class="gokart-button">Book nu</a>
   </main>
 
   <Footer />
@@ -288,7 +287,6 @@ display: block;
   cursor: pointer;
   transition: background-color 0.5s ease;
   text-align: center;
-  align-self: center;
   line-height: normal;
 }
 
@@ -296,7 +294,10 @@ display: block;
   background-color: #154B82;
 }
 
-
+.tilbudBooking a {
+    text-decoration: none;
+    align-self: center;
+}
 
 .gokart-page {
   max-width: 1200px;
@@ -366,25 +367,6 @@ display: block;
 .gokart-card p {
   font-size: 1.1rem;
   margin-top: 1rem;
-}
-
-.gokart-button {
-  display: block;
-  width: 4rem;
-  margin: 2rem auto 0 auto;
-  padding: 0.75rem 2.5rem;
-  background-color: #D41E2A;
-  color: #ffffff;
-  border: none;
-  border-radius: var(--desktopBorder);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.5s ease;
-  text-align: center;
-}
-
-.gokart-button:hover {
-  background-color: #154B82;
 }
 
 *{
