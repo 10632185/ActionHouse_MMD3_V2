@@ -14,13 +14,15 @@ const prevStep = () => {
 
 <template>
 <div class="timelineWrapper">
+    <div>
+        <h2>Vores historie</h2>
+    </div>
     <div class="timelines">
         <span :class="{ active: timeline === 1 }">1994</span>
         <span :class="{ active: timeline === 2 }">2000</span>
         <span :class="{ active: timeline === 3 }">2010</span>
         <span :class="{ active: timeline === 4 }">2016</span>
     </div>
-    <h2>Vores historie</h2>
     <div class="timelineContainer" v-if="timeline === 1">
         <p>1994: Action House åbner i de gamle RC Caravans-bygninger med indendørs gokart og bowling - det første kombinerede Funcenter i Danmark.</p>
         <p>1995: Udvidelse med et af Nordens største diskoteker og lasergame inspireret af New York.</p>
