@@ -1,13 +1,11 @@
 <script>
 import bookingForm from '~/components/bookingForm.vue';
+import navigation from '~/components/navigation.vue';
 </script>
 
 <template>
 <div>
-    <NuxtLink to="/">Home</NuxtLink>
-    <NuxtLink to="/aktiviteter">Aktiviteter</NuxtLink>
-    <NuxtLink to="/test">Test</NuxtLink>
-    <NuxtLink to="/booking">booking</NuxtLink>
+    <Navigation></Navigation>
 </div>
 <section>
     <article class="bookingIntro">

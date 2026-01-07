@@ -1,8 +1,11 @@
 <script setup>
-
+    import navigation from '~/components/navigation.vue';
 </script>
 
 <template>
+<nav>
+    <Navigation></Navigation>
+</nav>
 <section class="omOsContent">
     <img src="../assets/img/omOsHeader.png" alt="billede af medarbejdere fra Action House">
     <h1>Action House Funcenter i Løkken 

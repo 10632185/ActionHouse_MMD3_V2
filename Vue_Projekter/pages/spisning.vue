@@ -1,8 +1,11 @@
 <script setup>
-
+    import navigation from '~/components/navigation.vue';
 </script>
 
 <template>
+    <nav>
+        <Navigation></Navigation>
+    </nav>
     <section>
         <article class="foodIntro">
             <img src="../assets/img/spisningHeader.png" alt="hero billede til spisning med buffet">

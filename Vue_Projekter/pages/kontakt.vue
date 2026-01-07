@@ -1,8 +1,11 @@
 <script setup>
-
+import navigation from '~/components/navigation.vue';
 </script>
 
 <template>
+    <nav>
+        <Navigation></Navigation>
+    </nav>
 <section>
     <article>
         <img src="../assets/img/kontaktHeader.png" alt="billeder af mennesker med gokart hjelm">
