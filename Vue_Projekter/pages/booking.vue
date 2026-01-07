@@ -57,6 +57,16 @@ template{
     object-fit: cover;
 }
 
+@media (max-width: 400px) {
+    p{
+        width: 40ch;
+        font-size: 0.9rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+}
 
 
 

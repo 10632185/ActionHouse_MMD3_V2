@@ -3,9 +3,10 @@
 </script>
 
 <template>
-    <Navigation></Navigation>
+    <div class="nav">
+        <Navigation></Navigation>
+    </div>
     <div class="spisningWrapper">
-
         <section>
             <article class="foodIntro">
                 <img src="../assets/img/spisningHeader.png" alt="hero billede til spisning med buffet" loading="lazy">
@@ -112,14 +113,13 @@
 
     .foodIntro img{
         width: 100vw;
-        height: 50vh;
+        max-height: 50vh;
         object-fit: cover;
     }
 
     .menuContainer{
         display: flex;
         flex-direction: column;
-        margin-left: 100px;
     }
 
     h2{
@@ -146,7 +146,7 @@
     }
 
     .imgContianer img{
-        max-width: 30vw;
+        width: 30vw;
         max-height: 70vh;
         border-radius: 10px;
     }
@@ -170,8 +170,6 @@
         grid-template-columns: 1fr, 1fr;
         grid-template-rows: 1fr, 1fr;
         margin-top: 4rem;
-        margin-left: 100px;
-        margin-right: 100px;
     }
 
     .buffetContainer h2{
@@ -191,8 +189,8 @@
         justify-content: flex-end;
     }
 
-    .buffetContainer .buffetImg img{
-        max-width: 501px;
+    .buffetImg img{
+        width: 501px;
     }
     .buffetContainer .juleBuffetImg{
         grid-column: 2 / 3;
@@ -201,6 +199,109 @@
         align-items: center;
         justify-content: flex-end;
     }
+
+    .juleBuffetImg img{
+        width: 100%;
+        max-width: 30vw;
+        max-height: 60vh;
+    }
     
+    @media (max-width: 400px) {
+       
+    .nav{
+        display: none;
+    }
+
+    .spisningWrapper{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .foodIntro{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .foodIntro h1{
+        font-size: 2.5rem;
+    }
+
+    .foodIntro p{
+       max-width: 40ch;
+       font-size: 1rem;
+    }
+    .menuContainer{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .menuContainer h2{
+        font-size: 1.5rem;
+    }
+
+    .menuContainer p{
+        font-size: 1rem;
+        max-width: 40ch;
+    }
+
+    .menuContainer ul{
+        font-size: 1rem;
+    }
+
+    .imgContianer{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .imgContianer img{
+        width: 300px;
+    }
+
+    .buffetContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr , 1fr , 1fr;
+    }
+
+    .buffetContainer h1{
+        grid-row: 1 / 1;
+    }
+
+    .buffetContainer .buffetMad{
+        grid-row: 2 / 2;
+    }
+
+    .buffetContainer .buffetImg{
+        grid-column: 1 / 1;
+        grid-row: 3 / 4;
+    }
+
+    .buffetContainer h2{
+        font-size: 1.5rem;
+        max-width: 40ch;
+    }
+
+    .buffetMad ul{
+        font-size: 0.9rem;
+        max-width: 40ch;
+    }
+
+    .buffetMad p{
+        font-size: 0.9rem;
+        max-width: 40ch;
+    }   
+
+    .buffetImg img{
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buffetContainer{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    }
 
 </style>
