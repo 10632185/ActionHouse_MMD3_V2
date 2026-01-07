@@ -191,4 +191,49 @@ import Galleri from '../components/Galleri.vue'
 .lasergame-button:hover {
   background-color: #154B82;
 }
+
+@media (max-width: 600px) {
+  .lasergame-page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .lasergame-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .lasergame-card {
+    padding: 1rem;
+  }
+  .lasergame-card h3 {
+    font-size: 1.2rem;
+  }
+  .lasergame-card p,
+  .lasergame-card ul li {
+    font-size: 0.95rem;
+  }
+  .lasergame-intro h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .lasergame-intro p {
+    font-size: 0.95rem;
+  }
+  .lasergame-intro h3 {
+    font-size: 1.2rem;
+  }
+  .lasergame-rules h2 {
+    font-size: 1.3rem;
+  }
+  .lasergame-rules p {
+    font-size: 0.95rem;
+  }
+  .lasergame-button {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  *{
+    line-height: 1.5rem;
+  }
+}
 </style>

@@ -9,7 +9,6 @@ import SpillehalImg from '../assets/img/Spillehal.webp'
 import VirtualrealityImg from '../assets/img/VirtualReality.webp'
 import VREscapeImg from '../assets/img/VREscape.webp'
 
-// Originale kort
 const baseCards = [
   { image: BowlingImg },
   { image: GokartImg },
@@ -23,7 +22,6 @@ const baseCards = [
 const cardsPerPage = 3
 const activePage = ref(0)
 
-// Gentag kort så der altid er nok til loop
 const cards = computed(() => {
   const result = [...baseCards]
   while (result.length < cardsPerPage * Math.ceil(baseCards.length / cardsPerPage) + cardsPerPage) {
@@ -36,7 +34,6 @@ const pages = computed(() =>
   Math.ceil(baseCards.length / cardsPerPage)
 )
 
-// Flyt track baseret på activePage
 const translateX = computed(() => {
   const cardWidth = 300
   const gap = 32
@@ -44,7 +41,6 @@ const translateX = computed(() => {
   return `translateX(-${activePage.value * pageWidth}px)`
 })
 
-// Når man klikker på dot, loop tilbage hvis man går ud over siderne
 const goToPage = (page) => {
   if (page < 0) {
     activePage.value = pages.value - 1
@@ -125,5 +121,22 @@ const goToPage = (page) => {
 
 .dots span.active {
   background: #D41E2A;
+}
+
+@media (max-width: 400px) {
+  .viewport {
+    overflow-x: auto;
+  }
+  .track {
+    gap: 1rem;
+    transform: none !important;
+  }
+  .gallery-card {
+    flex: 0 0 200px;
+    height: 280px;
+  }
+  .gallery-card img {
+    object-fit: cover;
+  }
 }
 </style>

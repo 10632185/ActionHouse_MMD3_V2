@@ -1,6 +1,5 @@
 <script setup>
-
-    const openFaq = ref(null)
+const openFaq = ref(null)
 
 const faqs = [
   {
@@ -24,12 +23,10 @@ const faqs = [
 const toggleFaq = index => {
   openFaq.value = openFaq.value === index ? null : index
 }
-
 </script>
 
 <template>
-
-<section class="faq-section">
+  <section class="faq-section">
     <h2 class="faq-title">FAQ</h2>
 
     <div
@@ -47,12 +44,10 @@ const toggleFaq = index => {
         {{ faq.answer }}
       </div>
     </div>
-</section>
-
+  </section>
 </template>
 
 <style scoped>
-
 .faq-section {
   max-width: 60%;
   margin: 4rem auto;
@@ -96,4 +91,22 @@ const toggleFaq = index => {
   color: #154B82;
 }
 
+@media (max-width: 600px) {
+  .faq-section {
+    max-width: 100%;
+    margin: 2rem 1rem;
+    padding: 0;
+  }
+  .faq-header {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .chevron {
+    font-size: 1.4rem;
+  }
+  .faq-content {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem 1rem;
+  }
+}
 </style>

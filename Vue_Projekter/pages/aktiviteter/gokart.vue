@@ -49,7 +49,7 @@ import Galleri from '../components/Galleri.vue'
           <li>15 min Tidskørsel</li>
           <li>25 min Finale</li>
         </ul>
-        <a href="/powerbowling" class="gokart-read-more">Læs mere om pakker →</a>
+        <a href="/tilbudspakker" class="gokart-read-more">Læs mere om pakker →</a>
       </article>
 
       <article class="gokart-card">
@@ -179,5 +179,46 @@ import Galleri from '../components/Galleri.vue'
 
 .gokart-list li {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .gokart-page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .gokart-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .gokart-card {
+    padding: 1rem;
+  }
+  .gokart-card h3 {
+    font-size: 1.2rem;
+  }
+  .gokart-card p,
+  .gokart-card ul li {
+    font-size: 0.95rem;
+  }
+  .gokart-intro h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .gokart-intro p {
+    font-size: 0.95rem;
+  }
+  .gokart-info h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .gokart-info p,
+  .gokart-info ul li {
+    font-size: 0.95rem;
+  }
+  .gokart-button {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
 }
 </style>

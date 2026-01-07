@@ -165,7 +165,7 @@ onUnmounted(() => {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 100px; /* increased height */
+  height: 100px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 0 0 12px 12px;
   z-index: 1;
@@ -181,7 +181,6 @@ onUnmounted(() => {
   transform: translateY(-100%);
 }
 
-
 .flip-icon {
   position: absolute;
   bottom: 0.5rem;
@@ -190,7 +189,7 @@ onUnmounted(() => {
   color: white;
   opacity: 0.8;
   z-index: 2;
-   transform: translateX(-10%);
+  transform: translateX(-10%);
 }
 
 .flip-card-bagside {
@@ -220,5 +219,19 @@ onUnmounted(() => {
 
 .dots span.active {
   background: #D41E2A;
+}
+
+@media (max-width: 400px) {
+  .track {
+    overflow-x: auto;
+    gap: 1rem;
+  }
+  .flip-card {
+    flex: 0 0 200px;
+    height: 280px;
+  }
+  .flip-card-front img {
+    object-fit: cover;
+  }
 }
 </style>

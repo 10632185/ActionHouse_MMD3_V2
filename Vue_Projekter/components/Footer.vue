@@ -42,6 +42,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-links a {
@@ -65,5 +67,26 @@
   font-size: 1.2rem;
   color: #6b6b6b;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-links a {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .footer-logo img {
+    height: 3rem;
+  }
+  .footer-info p {
+    font-size: 1rem;
+  }
 }
 </style>

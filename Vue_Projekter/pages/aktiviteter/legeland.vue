@@ -50,7 +50,7 @@ import Galleri from '../components/Galleri.vue'
           Hverdage (mandag-torsdag) 120,- pr. barn<br>
           Weekender og helligdage, samt skoleferier 140,- pr. barn
         </p>
-        <a href="/powerbowling" class="read-more">Læs mere om pakken →</a>
+        <a href="/tilbudspakker" class="read-more">Læs mere om pakken →</a>
       </article>
 
       <article class="info-card">
@@ -153,5 +153,41 @@ import Galleri from '../components/Galleri.vue'
 
 .bowlingButton:hover {
   background-color: #154B82;
+}
+
+@media (max-width: 600px) {
+  .bowling-page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .info-card {
+    padding: 1rem;
+  }
+  .info-card h3 {
+    font-size: 1.2rem;
+  }
+  .info-card h4 {
+    font-size: 1rem;
+  }
+  .info-card p,
+  .info-card ul li {
+    font-size: 0.95rem;
+  }
+  .intro h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .intro p {
+    font-size: 0.95rem;
+  }
+  .bowlingButton {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
 }
 </style>

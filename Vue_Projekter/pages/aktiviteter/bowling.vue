@@ -62,7 +62,7 @@ import Galleri from '../components/Galleri.vue'
           <li>Shotspakken til 679,- kr.</li>
         </ul>
 
-        <a href="/powerbowling" class="bowling-read-more">
+        <a href="/tilbudspakker" class="bowling-read-more">
           Læs mere om pakker →
         </a>
       </article>
@@ -183,5 +183,46 @@ import Galleri from '../components/Galleri.vue'
 
 .bowling-button:hover {
   background-color: #154B82;
+}
+
+@media (max-width: 600px) {
+  .bowling-page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .bowling-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .bowling-card {
+    padding: 1rem;
+  }
+  .bowling-card h3 {
+    font-size: 1.2rem;
+  }
+  .bowling-card ul li {
+    font-size: 0.9rem;
+  }
+  .bowling-intro h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .bowling-intro p,
+  .bowling-intro ul {
+    font-size: 0.95rem;
+  }
+  .bowling-power h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .bowling-power p,
+  .bowling-power ul {
+    font-size: 0.95rem;
+  }
+  .bowling-button {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
 }
 </style>

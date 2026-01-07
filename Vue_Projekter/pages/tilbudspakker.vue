@@ -33,11 +33,11 @@ const activeCategory = ref('all')
     </nav>
 
     <section class="tilbudSection">
-        <h2 class="h2Blue">Tilbud</h2>
-        <div class="tilbudBooking">
+      <h2 class="h2Blue">Tilbud</h2>
+      <div class="tilbudBooking">
         <p>Her finder du vores tilbudspakker, hvor flere af Action House Funcenters mest populære aktiviteter er samlet i én oplevelse. Pakkerne gør det nemt at planlægge en dag fyldt med action, sjov og fællesskab, uanset anledning.</p>
         <a href="/booking"><button>Book nu</button></a>
-        </div>
+      </div>
     </section>
 
     <section v-if="activeCategory === 'all'">
@@ -50,7 +50,12 @@ const activeCategory = ref('all')
             <li>12 min lasergame</li>
             <li>55 min bowling</li>
           </ul>
-          <p>Pris: 239,- kr. / inkl. spisning: 399,- / buffet: 419,-</p>
+          <p>Pris pr. pers. 239,- kr.</p>
+          <p>inkl. spisning 399,- kr.</p>
+          <p>inkl. buffet 419,- kr.</p>
+          <p>excl. skoleje á 15,- kr. og hjelmleje á 20,- kr.</p>
+          <p>Ved min. 4 personer</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
 
         <article class="gokart-card">
@@ -60,7 +65,12 @@ const activeCategory = ref('all')
             <li>20 min lasergame</li>
             <li>55 min bowling</li>
           </ul>
-          <p>Pris: 399,- kr. / inkl. spisning: 559,- / buffet: 579,-</p>
+          <p>Pris pr. pers. 399,- kr.</p>
+          <p>inkl. spisning 559,- kr.</p>
+          <p>inkl. buffet 579,- kr.</p>
+          <p>excl. skoleje á 15,- kr. og hjelmleje á 20,- kr.</p>
+          <p>Ved min. 4 personer</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
 
         <article class="gokart-card">
@@ -70,17 +80,27 @@ const activeCategory = ref('all')
             <li>20 min lasergame</li>
             <li>55 min bowling</li>
           </ul>
-          <p>Pris pr. pers.      399,- kr. inkl. spisning     559,- kr. inkl. buffet          579,- kr.</p>
+          <p>Pris pr. pers. 399,- kr.</p>
+          <p>inkl. spisning 559,- kr.</p>
+          <p>inkl. buffet 579,- kr.</p>
+          <p>excl. skoleje á 15,- kr. og hjelmleje á 20,- kr.</p>
+          <p>Ved min. 4 personer</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
 
         <article class="gokart-card">
           <h3>VR Action Pakke</h3>
           <ul>
-            <li>12 min VR</li>
+            <li>12 min Virtual Reality</li>
             <li>10 min gokart</li>
             <li>12 min lasergame</li>
           </ul>
-          <p>Pris: 309,- kr. / inkl. spisning: 469,- / buffet: 489,-</p>
+          <p>Pris pr. pers. 309,- kr.</p>
+          <p>inkl. spisning 469,- kr.</p>
+          <p>inkl. buffet 489,- kr.</p>
+          <p>excl. hjelmleje á 20,- kr.</p>
+          <p>Ved min. 4 personer</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
 
         <article class="gokart-card">
@@ -90,7 +110,11 @@ const activeCategory = ref('all')
             <li>25 min gokart formel 1</li>
             <li>20 min lasergame</li>
           </ul>
-          <p>Pris pr. pers.       525,-  kr. inkl. spisning      685,- kr. inkl. buffet          705,- kr.</p>
+          <p>Pris pr. pers. 525,- kr.</p>
+          <p>inkl. spisning 685,- kr.</p>
+          <p>inkl. buffet 705,- kr.</p>
+          <p>Ved min. 4 personer</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
       </div>
 
@@ -103,7 +127,10 @@ const activeCategory = ref('all')
             <li>20 min lasergame</li>
             <li>55 min bowling</li>
           </ul>
-          <p>Pris: 209,- kr. / inkl. spisning: 369,- / buffet: 389,-</p>
+          <p>Pris: 209,- kr.</p>
+          <p>inkl. spisning 369,- kr.</p>
+          <p>inkl. buffet 389,- kr.</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
 
         <article class="gokart-card">
@@ -113,7 +140,10 @@ const activeCategory = ref('all')
             <li>Skydesimulator</li>
             <li>55 min bowling</li>
           </ul>
-          <p>Pris: 399,- kr. / inkl. spisning: 559,- / buffet: 579,-</p>
+          <p>Pris: 399,- kr.</p>
+          <p>inkl. spisning 559,- kr.</p>
+          <p>inkl. buffet 579,- kr.</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
       </div>
 
@@ -125,7 +155,10 @@ const activeCategory = ref('all')
             <li>15 min tidstagning</li>
             <li>10 min finale</li>
           </ul>
-          <p>Pris: 295,- kr. / inkl. spisning: 455,- / buffet: 475,-</p>
+          <p>Pris: 295,- kr.</p>
+          <p>inkl. spisning 455,- kr.</p>
+          <p>inkl. buffet 475,- kr.</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
 
         <article class="gokart-card">
@@ -134,7 +167,10 @@ const activeCategory = ref('all')
             <li>25 min tidstagning</li>
             <li>25 min finale</li>
           </ul>
-          <p>Pris: 578,- kr. / inkl. spisning: 738,- / buffet: 758,-</p>
+          <p>Pris: 578,- kr.</p>
+          <p>inkl. spisning 738,- kr.</p>
+          <p>inkl. buffet 758,- kr.</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
 
         <article class="gokart-card">
@@ -144,7 +180,10 @@ const activeCategory = ref('all')
             <li>Min. 18 hold (2-4 pers.)</li>
             <li>Min. 36 pers.</li>
           </ul>
-          <p>Pris: 749,- kr. pr. kart / mad: +160,- / buffet: +180,-</p>
+          <p>Pris: 749,- kr. pr. kart</p>
+          <p>mad: +160,-</p>
+          <p>buffet: +180,-</p>
+          <a href="/spisning" class="read-more">Læs om menuen her ></a>
         </article>
       </div>
     </section>
@@ -157,7 +196,12 @@ const activeCategory = ref('all')
           <li>12 min lasergame</li>
           <li>55 min bowling</li>
         </ul>
-        <p>Pris: 239,- kr. / inkl. spisning: 399,- / buffet: 419,-</p>
+        <p>Pris pr. pers. 239,- kr.</p>
+        <p>inkl. spisning 399,- kr.</p>
+        <p>inkl. buffet 419,- kr.</p>
+        <p>excl. skoleje á 15,- kr. og hjelmleje á 20,- kr.</p>
+        <p>Ved min. 4 personer</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
 
       <article class="gokart-card">
@@ -167,7 +211,12 @@ const activeCategory = ref('all')
           <li>20 min lasergame</li>
           <li>55 min bowling</li>
         </ul>
-        <p>Pris: 399,- kr. / inkl. spisning: 559,- / buffet: 579,-</p>
+        <p>Pris pr. pers. 399,- kr.</p>
+        <p>inkl. spisning 559,- kr.</p>
+        <p>inkl. buffet 579,- kr.</p>
+        <p>excl. skoleje á 15,- kr. og hjelmleje á 20,- kr.</p>
+        <p>Ved min. 4 personer</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
 
       <article class="gokart-card">
@@ -177,17 +226,27 @@ const activeCategory = ref('all')
           <li>20 min lasergame</li>
           <li>55 min bowling</li>
         </ul>
-        <p>Pris pr. pers.      399,- kr. inkl. spisning     559,- kr. inkl. buffet          579,- kr.</p>
+        <p>Pris pr. pers. 399,- kr.</p>
+        <p>inkl. spisning 559,- kr.</p>
+        <p>inkl. buffet 579,- kr.</p>
+        <p>excl. skoleje á 15,- kr. og hjelmleje á 20,- kr.</p>
+        <p>Ved min. 4 personer</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
 
       <article class="gokart-card">
         <h3>VR Action Pakke</h3>
         <ul>
-          <li>12 min VR</li>
+          <li>12 min Virtual Reality</li>
           <li>10 min gokart</li>
           <li>12 min lasergame</li>
         </ul>
-        <p>Pris: 309,- kr. / inkl. spisning: 469,- / buffet: 489,-</p>
+        <p>Pris pr. pers. 309,- kr.</p>
+        <p>inkl. spisning 469,- kr.</p>
+        <p>inkl. buffet 489,- kr.</p>
+        <p>excl. hjelmleje á 20,- kr.</p>
+        <p>Ved min. 4 personer</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
 
       <article class="gokart-card">
@@ -197,11 +256,15 @@ const activeCategory = ref('all')
           <li>25 min gokart formel 1</li>
           <li>20 min lasergame</li>
         </ul>
-        <p>Pris pr. pers.       525,-  kr. inkl. spisning      685,- kr. inkl. buffet          705,- kr.</p>
+        <p>Pris pr. pers. 525,- kr.</p>
+        <p>inkl. spisning 685,- kr.</p>
+        <p>inkl. buffet 705,- kr.</p>
+        <p>Ved min. 4 personer</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
     </section>
 
-    <section v-if="activeCategory === 'dameherre'" class="gokart-info-grid">
+    <section v-if="activeCategory === 'dameherre' " class="gokart-info-grid">
       <article class="gokart-card">
         <h3>Dameaften</h3>
         <ul>
@@ -209,7 +272,10 @@ const activeCategory = ref('all')
           <li>20 min lasergame</li>
           <li>55 min bowling</li>
         </ul>
-        <p>Pris: 209,- kr. / inkl. spisning: 369,- / buffet: 389,-</p>
+        <p>Pris: 209,- kr.</p>
+        <p>inkl. spisning 369,- kr.</p>
+        <p>inkl. buffet 389,- kr.</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
 
       <article class="gokart-card">
@@ -219,7 +285,10 @@ const activeCategory = ref('all')
           <li>Skydesimulator</li>
           <li>55 min bowling</li>
         </ul>
-        <p>Pris: 399,- kr. / inkl. spisning: 559,- / buffet: 579,-</p>
+        <p>Pris: 399,- kr.</p>
+        <p>inkl. spisning 559,- kr.</p>
+        <p>inkl. buffet 579,- kr.</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
     </section>
 
@@ -230,7 +299,10 @@ const activeCategory = ref('all')
           <li>15 min tidstagning</li>
           <li>10 min finale</li>
         </ul>
-        <p>Pris: 295,- kr. / inkl. spisning: 455,- / buffet: 475,-</p>
+        <p>Pris: 295,- kr.</p>
+        <p>inkl. spisning 455,- kr.</p>
+        <p>inkl. buffet 475,- kr.</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
 
       <article class="gokart-card">
@@ -239,7 +311,10 @@ const activeCategory = ref('all')
           <li>25 min tidstagning</li>
           <li>25 min finale</li>
         </ul>
-        <p>Pris: 578,- kr. / inkl. spisning: 738,- / buffet: 758,-</p>
+        <p>Pris: 578,- kr.</p>
+        <p>inkl. spisning 738,- kr.</p>
+        <p>inkl. buffet 758,- kr.</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
 
       <article class="gokart-card">
@@ -249,10 +324,12 @@ const activeCategory = ref('all')
           <li>Min. 18 hold (2-4 pers.)</li>
           <li>Min. 36 pers.</li>
         </ul>
-        <p>Pris: 749,- kr. pr. kart / mad: +160,- / buffet: +180,-</p>
+        <p>Pris: 749,- kr. pr. kart</p>
+        <p>mad: +160,-</p>
+        <p>buffet: +180,-</p>
+        <a href="/spisning" class="read-more">Læs om menuen her ></a>
       </article>
     </section>
-
   </main>
 
   <Footer />
@@ -269,13 +346,15 @@ const activeCategory = ref('all')
   margin-bottom: 5rem;
 }
 
-.tilbudBooking{
-    display: flex;
-    justify-content: space-between;
+.tilbudBooking {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
 }
 
 .tilbudBooking button {
-display: block;
+  display: block;
   width: 10rem;
   height: 4rem;
   padding: 0.75rem 2.5rem;
@@ -295,8 +374,7 @@ display: block;
 }
 
 .tilbudBooking a {
-    text-decoration: none;
-    align-self: center;
+  text-decoration: none;
 }
 
 .gokart-page {
@@ -319,12 +397,12 @@ display: block;
 }
 
 .tilbudSection p {
-    max-width: 60%;
-    line-height: 2rem;
+  max-width: 60%;
+  line-height: 1.6rem;
 }
 
-.category-title{
-    font-size: 1.7rem;
+.category-title {
+  font-size: 1.7rem;
 }
 
 .package-nav {
@@ -354,24 +432,104 @@ display: block;
 
 .gokart-info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  align-items: stretch;
 }
 
 .gokart-card {
   background: #DFE4E5;
   padding: 1.5rem;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.gokart-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
 }
 
 .gokart-card p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
+  font-size: 1.05rem;
+  margin: 0;
 }
 
-*{
-    line-height: 2rem;
+.read-more {
+  display: inline-block;
+  color: #154B82;
+  text-decoration: underline;
+  margin-top: auto;
 }
 
+* {
+  line-height: 1.6rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .gokart-page {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .gokart-info-grid {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .tilbudSection p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .gokart-page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .package-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .package-nav button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+  .tilbudBooking {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tilbudBooking p {
+    max-width: 100%;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  .tilbudBooking button {
+    width: auto;
+    height: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .category-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .gokart-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .gokart-card {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  .gokart-card h3 {
+    font-size: 1.2rem;
+  }
+  .gokart-card p,
+  .gokart-card ul li {
+    font-size: 0.95rem;
+  }
+}
 </style>

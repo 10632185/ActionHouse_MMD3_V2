@@ -66,7 +66,6 @@ import Footer from '../components/Footer.vue'
 </template>
 
 <style scoped>
-
 .frontpageWrapper {
   margin-left: 8.65625rem;
   margin-right: 8.65625rem;
@@ -148,4 +147,26 @@ img {
   line-height: 2rem;
 }
 
+@media (max-width: 400px) {
+  .frontpageWrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .forsideMaxLength {
+    max-width: 100%;
+  }
+  .omOsContainer {
+    flex-direction: column;
+  }
+  .forsideTitles {
+    text-align: center;
+  }
+  .forsideParagraphs {
+    margin-right: 0;
+    text-align: center;
+  }
+  .forsideButton {
+    width: 100%;
+  }
+}
 </style>
