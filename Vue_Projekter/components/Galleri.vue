@@ -83,7 +83,7 @@ const goToPage = (page) => {
 
 <style scoped>
 .gallery {
-  width: 80%;
+  width: 100%;
   margin: 0 auto 6rem;
 }
 

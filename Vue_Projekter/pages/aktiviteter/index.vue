@@ -33,7 +33,9 @@ const slugify = title =>
     Your browser does not support the video tag.
   </video>
 
-  <section>
+<div class="aktiviteterWrapper">
+
+  <section class="aktIntro">
     <h1 class="aktOverskrift">Aktiviteter</h1>
     <p class="aktParagraph">
       Hos Action House Funcenter finder du et bredt udvalg af actionfyldte og sjove aktiviteter for både børn, unge og voksne.
@@ -75,7 +77,7 @@ const slugify = title =>
       </div>
     </div>
   </section>
-
+</div>
   <FAQ />
   <Footer />
 </template>
@@ -92,8 +94,13 @@ const slugify = title =>
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: var(--NormPadding);
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
+}
+
+.aktiviteterWrapper {
+  margin-left: 8.65625rem;
+  margin-right: 8.65625rem;
 }
 
 .flip-card {
@@ -201,5 +208,9 @@ const slugify = title =>
   text-align: center;
   margin: 2rem 20rem;
   color: #154B82;
+}
+
+.aktIntro{
+  max-width: 100%;
 }
 </style>

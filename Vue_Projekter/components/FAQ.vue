@@ -54,7 +54,7 @@ const toggleFaq = index => {
 <style scoped>
 
 .faq-section {
-  max-width: 1200px;
+  max-width: 60%;
   margin: 4rem auto;
   padding: 0 2rem;
 }

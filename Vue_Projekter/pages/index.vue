@@ -8,7 +8,7 @@ import Footer from '../components/Footer.vue'
 <template>
   <Header />
 
-  <main>
+<main>
     <video
       class="hero-video"
       autoplay
@@ -19,7 +19,7 @@ import Footer from '../components/Footer.vue'
       <source src="../assets/vid/Action-house-1.1-II-_1_-_1_.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-
+  <div class="frontpageWrapper">
     <section>
       <h1 class="forsideTitles">Sjov og action for alle</h1>
       <p class="forsideParagraphs forsideMaxLength">
@@ -29,7 +29,7 @@ import Footer from '../components/Footer.vue'
         både børn og voksne.
       </p>
     </section>
-
+  
     <FlipCards />
 
     <h2 class="forsideTitles">Om os</h2>
@@ -42,7 +42,7 @@ import Footer from '../components/Footer.vue'
             Uanset om du kommer for at konkurrere, grine eller skabe minder med venner, familie
             eller kolleger, har vi rammerne til en dag fyldt med action.
             <br><br>
-            Læs mere på <a href="#">Om os.</a>
+            Læs mere på <a href="/omos">Om os.</a>
           </p>
         </div>
 
@@ -58,6 +58,7 @@ import Footer from '../components/Footer.vue'
       <h2 class="forsideTitles">Galleri</h2>
       <Galleri />
     </section>
+  </div>
   </main>
 
 <Footer />
@@ -65,6 +66,12 @@ import Footer from '../components/Footer.vue'
 </template>
 
 <style scoped>
+
+.frontpageWrapper {
+  margin-left: 8.65625rem;
+  margin-right: 8.65625rem;
+}
+
 .hero-video {
   width: 100%;
   height: auto;
@@ -74,14 +81,12 @@ import Footer from '../components/Footer.vue'
 .forsideTitles {
   text-align: left;
   margin-top: 2rem;
-  margin-left: 2rem;
   color: #154B82;
 }
 
 .forsideParagraphs {
   text-align: left;
   margin-top: 1rem;
-  margin-left: 2rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
 }
@@ -101,7 +106,7 @@ import Footer from '../components/Footer.vue'
 .omOsContainer {
   display: flex;
   flex-direction: row;
-  max-width: 80%;
+  max-width: 100%;
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -138,4 +143,9 @@ import Footer from '../components/Footer.vue'
 img {
   border-radius: var(--desktopBorder);
 }
+
+*{
+  line-height: 2rem;
+}
+
 </style>
