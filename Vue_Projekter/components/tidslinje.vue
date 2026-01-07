@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 
+// en reactiv variable som gemmer valuen af time line den er sat til 1 for at sikre at den altid vil starte på det første step. 
 const timeline = ref(1)
-
+// funktioner der ligger 1 værdi oven i value hvis valuen er mindre end 4.
 const nextStep = () => {
     if(timeline.value < 4) timeline.value++
 }
+// funktion der trækker 1 fra i value hvis tallet er højere end 1. 
 const prevStep = () => {
     if(timeline.value > 1) timeline.value--
 }
@@ -64,6 +66,7 @@ const prevStep = () => {
 
 <style scoped>
 
+
 .timelineWrapper{
     display: flex;
     flex-direction: column;
@@ -75,6 +78,7 @@ const prevStep = () => {
     gap: 10px;
     justify-content: space-evenly;
     max-width: 1000px;
+    min-width: auto;
 }
 
 .timelines span{

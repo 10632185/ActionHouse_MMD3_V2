@@ -3,9 +3,7 @@ import navigation from '~/components/navigation.vue';
 </script>
 
 <template>
-    <nav>
-        <Navigation></Navigation>
-    </nav>
+<Navigation></Navigation>
 <section>
     <article>
         <img src="../assets/img/kontaktHeader.png" alt="billeder af mennesker med gokart hjelm">
@@ -14,7 +12,7 @@ import navigation from '~/components/navigation.vue';
 <section class="kontaktContainer">
     <article class="kontaktInfo">
         <h2>kontakt</h2>
-        <p>Telefon +45 99 67</p>
+        <p>Telefon +45 99 67 67 10</p>
         <p>email: info@actionhouse.dk</p>
         <h2>Følg os på:</h2>
     </article>
@@ -63,7 +61,8 @@ h2{
 
 img{
     width: 100vw;
-    height: 70vh;
+    height: 50vh;
+    object-fit: cover;
 }
 
 
