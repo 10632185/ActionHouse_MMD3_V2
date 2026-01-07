@@ -3,23 +3,23 @@
 </script>
 
 <template>
-    <nav>
-        <Navigation></Navigation>
-    </nav>
-    <section>
-        <article class="foodIntro">
-            <img src="../assets/img/spisningHeader.png" alt="hero billede til spisning med buffet">
-            <h1>Spisning</h1>
-            <p>Hos Action House Funcenter kan I nyde lækker mad og forfriskninger midt i al actionen. Vores spisested er perfekt til at samle energi, hygge jer og fortsætte sjove oplevelser sammen - uanset om det er familie, venner eller kolleger.</p>
-        </article>
-    </section>
-    <section>
-        <article class="menuContainer">
-            <h2>Pakketilbud menuer</h2>
-            <p>vælg mellem:</p>
-            <ul>
-                <li>Steak af oksefilet med bearnaise sauce (pris uden aktiviteter 199,-)</li>
-                <li>Grillet kyllingebryst med whiskey sauce (pris uden aktiviteter 179,-)</li>
+    <Navigation></Navigation>
+    <div class="spisningWrapper">
+
+        <section>
+            <article class="foodIntro">
+                <img src="../assets/img/spisningHeader.png" alt="hero billede til spisning med buffet" loading="lazy">
+                <h1>Spisning</h1>
+                <p>Hos Action House Funcenter kan I nyde lækker mad og forfriskninger midt i al actionen. Vores spisested er perfekt til at samle energi, hygge jer og fortsætte sjove oplevelser sammen - uanset om det er familie, venner eller kolleger.</p>
+            </article>
+        </section>
+        <section>
+            <article class="menuContainer">
+                <h2>Pakketilbud menuer</h2>
+                <p>vælg mellem:</p>
+                <ul>
+                    <li>Steak af oksefilet med bearnaise sauce (pris uden aktiviteter 199,-)</li>
+                    <li>Grillet kyllingebryst med whiskey sauce (pris uden aktiviteter 179,-)</li>
             </ul>
             <p>Begge menuer vil blive serveret med frisk salat, dagens kartoffel og grønsager .</p>
             <ul>
@@ -29,21 +29,21 @@
             </ul>
             <p>Vi gør opmærksom på at man ikke kan forvente at få lokalet alene til denne pris for denne menu, ved selskaber i eget lokale henviser vi til vores selskabsbuffeter.</p>
             <p>Vi har fornyligt fået nyt sodavands og fadølsanlæg og kan derfor tilbyde hele 12 forskellige slags fadøl
-            Se vores spændende drikkevarer her
-            Få oplysninger om allergener ved at kontakt personalet
-            Se vores smiley og rapport her </p>
-            <div class="imgContianer">
-                <img src="../assets/img/spisning-Bar.jpg" alt="mand der står bag en bar">
-                <img src="../assets/img/spisning-Drikkevarer.jpg" alt="udvalg af drikke varer i baren">
-            </div>
-        </article>
-    </section>
-    <section>
-        <article class="buffetContainer">
-            <h2>Vores populære hjemmelavet buffeter</h2>
-            <div class="buffetMad">
-                <ul>
-                    <li>Tunmousse</li>
+                Se vores spændende drikkevarer her
+                Få oplysninger om allergener ved at kontakt personalet
+                Se vores smiley og rapport her </p>
+                <div class="imgContianer">
+                    <img src="../assets/img/spisning-Bar.jpg" alt="mand der står bag en bar" loading="lazy">
+                    <img src="../assets/img/spisning-Drikkevarer.jpg" alt="udvalg af drikke varer i baren" loading="lazy">
+                </div>
+            </article>
+        </section>
+        <section>
+            <article class="buffetContainer">
+                <h2>Vores populære hjemmelavet buffeter</h2>
+                <div class="buffetMad">
+                    <ul>
+                        <li>Tunmousse</li>
                     <li>Sprød kyllingesalat</li>
                     <li>Hjemmelavet pizza</li>
                     <li>Ovnbagt laks</li>
@@ -56,7 +56,7 @@
                 <p>Der kan nu tilkøbes fri softice dage der er buffet for kun 29,- pr. pers.</p>
             </div>
             <div class="buffetImg">
-                <img src="../assets/img/spisning-Buffet.png" alt="billede af salatbar i buffeten">
+                <img src="../assets/img/spisning-Buffet.png" alt="billede af salatbar i buffeten" loading="lazy">
             </div>
         </article>
     </section>
@@ -81,13 +81,20 @@
                 </ul>
             </div>
             <div class="juleBuffetImg">
-                <img src="../assets/img/spisning-julebuffet.png" alt="billede af buffet fra Action House">
+                <img src="../assets/img/spisning-julebuffet.png" alt="billede af buffet fra Action House" loading="lazy">
             </div>
         </article>
     </section>
+</div>
 </template>
 
 <style scoped>
+
+    .spisningWrapper{
+        margin-left: 8.65625rem;
+        margin-right: 8.65625rem;
+    }
+
     .foodIntro{
         display: flex;
         flex-direction: column;
@@ -105,7 +112,7 @@
 
     .foodIntro img{
         width: 100vw;
-        height: 60vh;
+        height: 50vh;
         object-fit: cover;
     }
 

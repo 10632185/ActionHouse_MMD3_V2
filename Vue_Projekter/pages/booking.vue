@@ -4,9 +4,8 @@ import navigation from '~/components/navigation.vue';
 </script>
 
 <template>
-<div>
-    <Navigation></Navigation>
-</div>
+
+<Navigation></Navigation>
 <section>
     <article class="bookingIntro">
         <img src="../assets/img/bookingHeader.jpg" alt="billede af en der bowler">
@@ -31,6 +30,10 @@ import navigation from '~/components/navigation.vue';
 </template>
 
 <style scoped>
+template{
+    margin-left: 8.65625rem;
+    margin-right: 8.65625rem;
+}
 
 .bookingIntro{
     display: flex;
@@ -50,7 +53,7 @@ import navigation from '~/components/navigation.vue';
 
 .bookingIntro img{
     width: 100%;
-    max-height: 70vh;
+    max-height: 50vh;
     object-fit: cover;
 }
 
