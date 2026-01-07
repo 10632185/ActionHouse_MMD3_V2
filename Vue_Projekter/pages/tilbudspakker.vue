@@ -288,8 +288,8 @@ const activeCategory = ref('all')
 }
 
 .package-nav button {
-  background-color: #F6B2B7;
-  color: white;
+  background-color: #FFAEB6;
+  color: black;
   border: none;
   padding: 0.6rem 1.5rem;
   border-radius: 6px;
@@ -300,6 +300,7 @@ const activeCategory = ref('all')
 
 .package-nav button:hover,
 .package-nav button.active {
+  color: white;
   background-color: #D41E2A;
 }
 
