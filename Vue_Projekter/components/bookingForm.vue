@@ -7,24 +7,24 @@ const step = ref(1)
 
 // steps data
 const formData = ref({
-    name: '',
-    lastName: '',
-    email: '',
-    telefonNr: '',
-    date: '',
-    time:'',
-    antalDeltagere: '',
+    name: "",
+    lastName: "",
+    email: "",
+    telefonNr: "",
+    date: "",
+    time:"",
+    antalDeltagere: "",
 })
 
 
 
 // navigere steps
-// via en if statement kan funktionen læse hvad værdien den span den står på og hvis den værdi er mindre en syv kan den ligge et tal oven i og navigere videre til den den næste span som har en value der er en højere. den skal ikke kunne gå over 7 fordi der ikke er flere steps i booking formularen
+// en if statement der læser step value og hvis den value er under syv ligger 1 tal oven i steps value
 const nextStep = () => {
     if (step.value < 7) step.value++
 }
 
-// samme som funktionen oven over ved at en if statement kan den læse valuen af den span den står på og hvis værdien er højere end 1 kan trække et tal fra og på den måde navigere en span tilbage vha. at læse den næste spans value
+// samme funktion som oven over en funktion med en if statement der kan læse step value og hvis værdien er over 1 kan den trække 1 fra steps value
 const prevStep = () => {
     if (step.value > 1) step.value--
 }
@@ -36,6 +36,7 @@ const sumbitForm = () => {
 }
 
 // dropdown til tilbudspakker
+// en variabel der binder det valgt tilbud ind i variablen som du vælger nede i select via v-model
 const valgtTilbud = ref("") 
 
 const tilbudspakker = [
@@ -56,8 +57,10 @@ const tilbudspakker = [
 ]
 
 // liste over aktiviteter
+// en variabel der gemmer de valg du klikker af i checkboxen via v-model binder den dine valg ind i en liste som gemmer de valg
 const valgtAktivitet = ref([]) 
 
+// et arrat med enkelte aktiviteter
 const aktiviteter = [
   "Bowling",
   "10min Gokart",
@@ -74,8 +77,10 @@ const aktiviteter = [
   "24min Virtuel reality (min 12 år)"
 ]
 // liste over spisemuligheder
+// en variabel der gemmer de valg du klikker af i checkboxen via v-model binder den dine valg ind i en liste som gemmer de valg
 const valgtSpiseOpt = ref([]) 
 
+// et array med spise muligheder
 const spiseOpt = [
   "forret",
   "hovedret",
@@ -86,8 +91,10 @@ const spiseOpt = [
 
 // list over steder folk kan have hørt om action house
 
+// en variabel der gemmer de valg du klikker af i checkboxen via v-model binder den dine valg ind i en liste som gemmer de valg
 const valgtLokation = ref([])
 
+// et array over de forskellige lokationer
 const lokationer = [
   "Google",
   "Facebook",
@@ -129,10 +136,14 @@ const visTilbud = ref(false)
           <div>
             <div class="checkboxValg">
               <label for="vælgTilbudspakker">Tilbudspakker</label>
+              <!-- en check box som har en default værdi på false og når den bliver tjekket af ændre værdien sig til true -->
               <input type="checkbox" id="vælgTilbudspakke" v-model="visTilbud">
             </div>
+            <!-- hvis værdien er true i variablen vistlbud skal den vise den select i DOM'en hvis ikke skal den er false skal den ikke renders -->
             <select v-if="visTilbud" name="vælgTilbudspakker" id="vælgTilbudspakker" v-model="valgtTilbud">
+              <!-- viser den tomme værdi når man ikke har valgt noget -->
               <option disabled value="">Vælg et tilbud</option>
+              <!-- en for each statement der laver en option for hver af de strings som er gemt i arrayet tilbudspakker -->
               <option v-for="tilbudspakke in tilbudspakker" :key="tilbudspakke" >{{ tilbudspakke }}</option>
             </select>
           </div>
@@ -142,6 +153,7 @@ const visTilbud = ref(false)
               <!-- Checkbox der viser/skjuler listen --> 
               <input type="checkbox" id="vælgAktivitet" v-model="visAktivitet">
             </div>
+          <!-- hvis værdien er true i variablen vistlbud skal den vise den select i DOM'en hvis ikke skal den er false skal den ikke renders -->
             <div v-if="visAktivitet"> 
               <div v-for="aktivitet in aktiviteter" :key="aktivitet" class="singleAktivitet">             
                   <input type="checkbox" :id="aktivitet" v-model="valgtAktivitet" > 
@@ -239,8 +251,11 @@ const visTilbud = ref(false)
     <div class="step" v-if="step === 6">
       <h2>Hvor fik du inspiration til Booking</h2>
       <div class="lokationContainer">
+        <!-- for each statement der skaber en checkbox og label for hver string der er gemt i variablen lokationer -->
         <div v-for="lokation in lokationer">
+          <!-- v-model binder vaulen fra checkboxen sammen med den variable der hedder valgtlokation som er dynmasik.  -->
           <input type="checkbox" class="lokationCheckbox" :id="lokation"  v-model="valgtLokation">
+          <!-- {{ lokation viser alle de muligheder de muligheder der er at vælge i mellem.  }} -->
           <label :for="lokation">{{ lokation }}</label>
         </div>
       </div>

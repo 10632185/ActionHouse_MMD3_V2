@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div class="nav">
+   
         <Navigation></Navigation>
-    </div>
+   
     <div class="spisningWrapper">
         <section>
             <article class="foodIntro">
@@ -211,9 +211,6 @@
     
     @media (max-width: 400px) {
        
-    .nav{
-        display: none;
-    }
 
     .spisningWrapper{
         margin-left: 0.5rem;

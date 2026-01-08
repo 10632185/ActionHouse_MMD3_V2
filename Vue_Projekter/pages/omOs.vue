@@ -3,9 +3,7 @@
 </script>
 
 <template>
-<nav>
     <Navigation></Navigation>
-</nav>
 <section class="omOsContent">
     <img src="../assets/img/omOsHeader.png" alt="billede af medarbejdere fra Action House" loading="lazy">
     <h1>Action House Funcenter i Løkken 
@@ -42,10 +40,6 @@ p{
 }
 
 @media (max-width: 400px) {
-    nav{
-        display: none;
-    }
-    
     template{
         margin-left: 8px;
         margin-right: 8px;

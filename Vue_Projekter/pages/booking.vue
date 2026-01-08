@@ -4,7 +4,6 @@ import navigation from '~/components/navigation.vue';
 </script>
 
 <template>
-
 <Navigation></Navigation>
 <section>
     <article class="bookingIntro">
