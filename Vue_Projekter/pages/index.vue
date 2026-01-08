@@ -147,7 +147,7 @@ img {
   line-height: 2rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .frontpageWrapper {
     margin-left: 1rem;
     margin-right: 1rem;

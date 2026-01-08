@@ -94,7 +94,14 @@ onUnmounted(() => {
 
           <div class="flip-card-bagside">
             <p>{{ card.description }}</p>
+            
+            <NuxtLink
+                :to="`/aktiviteter/${card.title}`"
+                class="read-more-link">
+                Læs mere om {{ card.title }}
+          </NuxtLink>
           </div>
+          
         </div>
       </div>
     </div>
@@ -149,6 +156,8 @@ onUnmounted(() => {
   border-radius: 12px;
   backface-visibility: hidden;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .flip-card-front img {
