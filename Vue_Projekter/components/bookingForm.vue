@@ -7,13 +7,13 @@ const step = ref(1)
 
 // steps data
 const formData = ref({
-    name: "",
-    lastName: "",
-    email: "",
-    telefonNr: "",
-    date: "",
-    time:"",
-    antalDeltagere: "",
+    name: '',
+    lastName: '',
+    email: '',
+    telefonNr: '',
+    date: '',
+    time:'',
+    antalDeltagere: '',
 })
 
 
@@ -139,7 +139,7 @@ const visTilbud = ref(false)
               <!-- en check box som har en default værdi på false og når den bliver tjekket af ændre værdien sig til true -->
               <input type="checkbox" id="vælgTilbudspakke" v-model="visTilbud">
             </div>
-            <!-- hvis værdien er true i variablen vistlbud skal den vise den select i DOM'en hvis ikke skal den er false skal den ikke renders -->
+            <!-- hvis værdien er true i variablen vistlbud skal den vise den select i DOM'en hvis ikke skal er den false og skal den ikke renders -->
             <select v-if="visTilbud" name="vælgTilbudspakker" id="vælgTilbudspakker" v-model="valgtTilbud">
               <!-- viser den tomme værdi når man ikke har valgt noget -->
               <option disabled value="">Vælg et tilbud</option>
@@ -155,8 +155,10 @@ const visTilbud = ref(false)
             </div>
           <!-- hvis værdien er true i variablen vistlbud skal den vise den select i DOM'en hvis ikke skal den er false skal den ikke renders -->
             <div v-if="visAktivitet"> 
-              <div v-for="aktivitet in aktiviteter" :key="aktivitet" class="singleAktivitet">             
+              <div v-for="aktivitet in aktiviteter" :key="aktivitet" class="singleAktivitet">  
+                          <!-- v-model binder vaulen fra checkboxen sammen med med id i aktivitet og gemmer det i valgtlokation som er dynmasik. dvs siger den opdater checkboxen når du klikker den af og indsætter det id der passer til det label  -->
                   <input type="checkbox" :id="aktivitet" v-model="valgtAktivitet" > 
+                            <!-- {{ aktivitet }} viser alle strings i arrayet og laver et label for hver af dem som passer med en checkboxens id.-->
                   <label :for="aktivitet">{{ aktivitet }}</label> 
               </div> 
           </div> 
@@ -167,7 +169,6 @@ const visTilbud = ref(false)
         </div>         
     </div>
     <!-- en if statement der gør at vis steps value er = 1 skal den render dette indhold -->
-    
 
     <!-- Step 2 spisning-->
     <div class="step" v-if="step === 2">
@@ -253,9 +254,9 @@ const visTilbud = ref(false)
       <div class="lokationContainer">
         <!-- for each statement der skaber en checkbox og label for hver string der er gemt i variablen lokationer -->
         <div v-for="lokation in lokationer">
-          <!-- v-model binder vaulen fra checkboxen sammen med den variable der hedder valgtlokation som er dynmasik.  -->
+          <!-- v-model binder vaulen fra checkboxen sammen med med id i lokation og gemmer det i valgtlokation som er dynmasik. dvs siger den opdater checkboxen når du klikker den af og indsætter det id der passer til det label  -->
           <input type="checkbox" class="lokationCheckbox" :id="lokation"  v-model="valgtLokation">
-          <!-- {{ lokation viser alle de muligheder de muligheder der er at vælge i mellem.  }} -->
+          <!-- {{ lokation }} viser alle strings i arrayet og laver et label for hver af dem som passer med en checkboxens id.-->
           <label :for="lokation">{{ lokation }}</label>
         </div>
       </div>
