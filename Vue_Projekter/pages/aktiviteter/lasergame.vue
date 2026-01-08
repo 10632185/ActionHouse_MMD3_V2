@@ -65,7 +65,7 @@ import Galleri from '../components/Galleri.vue'
           <li>20 min lasergame</li>
           <li>55 min bowling</li>
         </ul>
-        <a href="/powerbowling" class="lasergame-read-more">Læs mere om pakker →</a>
+        <a href="/tilbudspakker" class="lasergame-read-more">Læs mere om pakker →</a>
       </article>
 
       <article class="lasergame-card">

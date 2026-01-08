@@ -12,13 +12,13 @@ import VirtualrealityImg from '../assets/img/VirtualReality.webp'
 import VREscapeImg from '../assets/img/VREscape.webp'
 
 const cards = [
-  { title: 'bowling', description: 'Hvis du er til bowling, så er Action House stedet. Oplev sjov bowling for hele familien i vores bowlingcenter.', image: BowlingImg },
-  { title: 'gokart', description: 'Danmarks fedeste indendørs gokartbane. Oplev høj fart på vores indendørs gokartbane, som er en af Danmarks længste baner!', image: GokartImg },
-  { title: 'lasergame', description: 'Prøv Laser Maxx Lasergame i Action House. En sjov oplevelse for hele familien, venner eller kolleger', image: LasergameImg },
-  { title: 'legeland', description: 'Stort legeland hvor børnene kan have det sjovt. Hos Action House har vi et legeland for børn i alle aldre.', image: LegelandImg },
-  { title: 'spillehal', description: 'I Action House har vi udover alle vores andre attraktioner en spillehal med bl.a. Pool, Billiard, Air-hockey og meget mere', image: SpillehalImg },
-  { title: 'virtual-reality', description: 'Stort VEX Virtual Reality Arena. Kom til Action House og oplev vores super sjove VR Arena og nedkæmp zombier med venner og familie.', image: VirtualrealityImg },
-  { title: 'vr-escaperoom', description: 'Tag de virtuelle briller og udstyr på og bevæg dig på mission med vennerne, familien eller kollegaerne på vores nye Vex Virtuel Reality Escaperoom.', image: VREscapeImg }
+  { title: 'bowling', titleshow: 'Bowling', description: 'Hvis du er til bowling, så er Action House stedet. Oplev sjov bowling for hele familien i vores bowlingcenter.', image: BowlingImg },
+  { title: 'gokart', titleshow: 'Gokart', description: 'Danmarks fedeste indendørs gokartbane. Oplev høj fart på vores indendørs gokartbane, som er en af Danmarks længste baner!', image: GokartImg },
+  { title: 'lasergame', titleshow: 'Lasergame', description: 'Prøv Laser Maxx Lasergame i Action House. En sjov oplevelse for hele familien, venner eller kolleger', image: LasergameImg },
+  { title: 'legeland', titleshow: 'Legeland', description: 'Stort legeland hvor børnene kan have det sjovt. Hos Action House har vi et legeland for børn i alle aldre.', image: LegelandImg },
+  { title: 'gokart', titleshow: 'Spillehal', description: 'I Action House har vi udover alle vores andre attraktioner en spillehal med bl.a. Pool, Billiard, Air-hockey og meget mere', image: SpillehalImg },
+  { title: 'gokart', titleshow: 'Virtual Reality', description: 'Stort VEX Virtual Reality Arena. Kom til Action House og oplev vores super sjove VR Arena og nedkæmp zombier med venner og familie.', image: VirtualrealityImg },
+  { title: 'gokart', titleshow: 'VR Escape Room', description: 'Tag de virtuelle briller og udstyr på og bevæg dig på mission med vennerne, familien eller kollegaerne på vores nye Vex Virtuel Reality Escaperoom.', image: VREscapeImg }
 ]
 
 const slugify = title =>
@@ -51,7 +51,7 @@ const slugify = title =>
             <img :src="card.image" alt="" />
             <div class="front-overlay">
               <div class="text-background"></div>
-              <h3>{{ card.title }}</h3>
+              <h3>{{ card.titleshow }}</h3>
             </div>
             <div class="flip-icon">↻</div>
           </div>
