@@ -470,6 +470,11 @@ button{
 
 @media (max-width: 600px) {
 
+.bookingForm{
+  max-width: 400px;
+  overflow: hidden;
+}
+
 .steps span {
   width: 40px;
   height: 40px;
@@ -477,7 +482,6 @@ button{
 
 .step{
   margin: 1rem 1rem 1rem 1rem;
-  max-width: 400px;
 }
 .step h2{
   font-size: 1.5rem;
