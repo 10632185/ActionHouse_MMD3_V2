@@ -468,7 +468,7 @@ button{
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 
 .steps span {
   width: 40px;

@@ -56,7 +56,7 @@ template{
     object-fit: cover;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     p{
         width: 40ch;
         font-size: 0.9rem;

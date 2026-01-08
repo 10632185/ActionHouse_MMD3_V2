@@ -39,7 +39,7 @@ p{
     width: 70ch;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     template{
         margin-left: 8px;
         margin-right: 8px;

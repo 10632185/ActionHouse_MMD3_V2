@@ -11,13 +11,20 @@ import navigation from '~/components/navigation.vue';
 </section>
 <section class="kontaktContainer">
     <article class="kontaktInfo">
-        <h2>kontakt</h2>
-        <p>Telefon +45 99 67 67 10</p>
-        <p>email: info@actionhouse.dk</p>
-        <h2>Følg os på:</h2>
+        <h2>Kontakt</h2>
+        <a href="tel:+4599676710">Telefon +45 99 67 67 10</a>
+        <br>
+        <a href="mailto:info@actionhouse.dk">Email: info@actionhouse.dk</a>     
+        <div class="socialContainer">    
+            <h2>Følg os på:</h2>
+            <div>
+                <img src="../assets/img/facebook-logo.svg" alt="facebook logo">
+                <img src="../assets/img/X-logo.svg" alt="x logo">
+            </div>
+        </div>
     </article>
     <article class="kontaktDato">
-        <h2>åbningstider</h2>
+        <h2>Åbningstider</h2>
         <div class="datoOgTid">
             <div>
                 <p>Mandag</p>
@@ -39,8 +46,11 @@ import navigation from '~/components/navigation.vue';
             </div>
         </div>
     </article>
-   
-  
+</section>
+<section>
+    <article>
+        <FAQ></FAQ>
+    </article>
 </section>
 </template>
 
@@ -54,6 +64,15 @@ h2{
     justify-content: space-evenly;
 }
 
+a{
+    color: var(--mainblue);
+}
+
+.kontaktInfo{
+    display: flex;
+    flex-direction: column;
+}
+
 .datoOgTid{
     display: flex;
     justify-content: space-between;
@@ -65,7 +84,16 @@ img{
     object-fit: cover;
 }
 
-@media (max-width: 400px){
+.socialContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.socialContainer img{
+    width: 100px;
+}
+
+@media (max-width: 600px){
     
     .kontaktContainer{
         flex-direction: column;
@@ -77,7 +105,9 @@ img{
         font-size: 2.5rem;
     }
 
-
+    .socialContainer img{
+    width: 80px;
+}
 }
 
 </style>
