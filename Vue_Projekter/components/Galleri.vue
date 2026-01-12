@@ -1,6 +1,6 @@
 <script setup>
   // Importerer nødvendige funktioner fra Vue
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 // Importerer billeder til galleriet
 import BowlingImg from '../assets/img/Bowling.webp'
@@ -58,6 +58,37 @@ const goToPage = (page) => {
     activePage.value = page
   }
 }
+
+// NY KODE TIL KAROUSEL:
+
+// Holder styr på autoplay for galleriet
+let interval = null
+
+// Starter autoplay funktionen som skifter side hver 5. sekund
+const startAutoplay = () => {
+  if (interval) return
+  interval = setInterval(() => {
+    activePage.value = (activePage.value + 1) % pages.value
+  }, 5000)
+}
+
+// Stopper autoplay funktionen
+const stopAutoplay = () => {
+  clearInterval(interval)
+  interval = null
+}
+
+// Starter autoplay når komponentet monteres
+onMounted(() => {
+  startAutoplay()
+})
+
+// Stopper autoplay når komponentet fjernes
+onUnmounted(() => {
+  stopAutoplay()
+})
+
+
 </script>
 
 <template>
