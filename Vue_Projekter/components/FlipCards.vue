@@ -9,6 +9,7 @@ import Legeland from '../assets/img/Legeland.webp'
 import Spillehal from '../assets/img/Spillehal.webp'
 import Virtualreality from '../assets/img/VirtualReality.webp'
 import VREscape from '../assets/img/VREscape.webp'
+import VREscape2 from '../assets/img/VREscape2.webp'
 
 // Definerer værdier i et array som vi kan bruge til at generere flipcards
 const baseCards = [
@@ -18,7 +19,7 @@ const baseCards = [
   { title: 'Gokart', titleshow: 'Spillehal', caption: 'Spillehal til familien', description: 'Nyd sjove arkadespil i spillehalen', image: Spillehal },
   { title: 'Legeland', titleshow: 'Legeland', caption: 'Legeland til børn', description: 'Sjov og leg for de mindste.', image: Legeland },
   { title: 'Gokart', titleshow: 'Virtual Reality', caption: 'Virtual reality', description: 'Oplev VR i verdensklasse.', image: Virtualreality },
-  { title: 'Gokart', titleshow: 'VR Escape', caption: 'Firma og grupper', description: 'Perfekt til firmaevents og grupper.', image: VREscape }
+  { title: 'Gokart', titleshow: 'VR Escape', caption: 'Firma og grupper', description: 'Perfekt til firmaevents og grupper.', image: VREscape2 }
 ]
 
 // Definerer antal kort per side og antal sider i carousel (3*3=9 kort vist)

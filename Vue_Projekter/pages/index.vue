@@ -6,7 +6,7 @@ import Footer from '../components/Footer.vue'
 
 useSeoMeta({
   title: 'Forside | Action House Funcenter',
-  description: 'Velkommen til Action House Funcenter i Løkken! Oplev sjove og actionfyldte aktiviteter som bowling, gokart, legeland og meget mere på 12.530 m².'
+  description: 'Velkommen til Action House Funcenter i Løkken! vi har mange sjove og actionfyldte aktiviteter, som bowling, gokart, legeland og meget mere på 12.530 m². er der noget for alle aldre. På vores aktivtets side finder du en oversigt over alle vores aktivteter og mulighed for at søge mere info omkring dem. se vores intro video for at få en ide om alle de spændende og adrenalin fyldte aktivteter',
 })
 
 
