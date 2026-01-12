@@ -4,9 +4,9 @@ import Footer from '../components/Footer.vue'
 import Galleri from '../components/Galleri.vue'
 import breadcrumbs from '../components/breadcrumbs.vue'
 
-useHead ({
+useSeoMeta ({
   title: 'Lasergame | Action House Funcenter',
-  meta: [{name: 'description', content: 'Oplev spændingsfuld lasergame og høj adrenalin hos Action House Funcenter i Løkken.'}]
+  description: 'Oplev spændingsfuld lasergame og høj adrenalin hos Action House Funcenter i Løkken.'
 });
 
 </script>

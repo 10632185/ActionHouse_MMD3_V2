@@ -4,10 +4,11 @@ import FlipCards from '../components/FlipCards.vue'
 import Galleri from '../components/Galleri.vue'
 import Footer from '../components/Footer.vue'
 
-useHead ({
+useSeoMeta({
   title: 'Forside | Action House Funcenter',
-  meta: [{name: 'description', content: 'Velkommen til Action House Funcenter i Løkken! Oplev sjove og actionfyldte aktiviteter som bowling, gokart, legeland og meget mere på 12.530 m².'}]
-});
+  description: 'Velkommen til Action House Funcenter i Løkken! Oplev sjove og actionfyldte aktiviteter som bowling, gokart, legeland og meget mere på 12.530 m².'
+})
+
 
 </script>
 

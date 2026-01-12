@@ -2,9 +2,9 @@
 import navigation from '~/components/navigation.vue';
 import Footer from '../components/Footer.vue'
 
-useHead ({
+useSeoMeta ({
   title: 'Kontakt | Action House Funcenter',
-  meta: [{name: 'description', content: 'Kontakt Action House for yderligere spørgsmål eller for booking af baner og aktiviteter.'}]
+  description: 'Kontakt Action House for yderligere spørgsmål eller for booking af baner og aktiviteter.'
 });
 
 </script>

@@ -2,9 +2,9 @@
     import navigation from '~/components/navigation.vue';
     import Footer from '../components/Footer.vue'
 
-useHead ({
+useSeoMeta ({
   title: 'Om Os | Action House Funcenter',
-  meta: [{name: 'description', content: 'Læs mere om os hos Action House Funcenter i Løkken samt vores historie.'}]
+  description: 'Læs mere om os hos Action House Funcenter i Løkken samt vores historie.'
 });
 
 </script>

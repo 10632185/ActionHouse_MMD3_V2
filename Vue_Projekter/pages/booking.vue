@@ -3,9 +3,9 @@ import bookingForm from '~/components/bookingForm.vue';
 import navigation from '~/components/navigation.vue';
 import Footer from '../components/Footer.vue'
 
-useHead ({
+useSeoMeta ({
   title: 'Booking | Action House Funcenter',
-  meta: [{name: 'description', content: 'Book aktivitet hos Action House Funcenter i Løkken nu.'}]
+  description: 'Book aktivitet hos Action House Funcenter i Løkken nu.'
 });
 
 </script>

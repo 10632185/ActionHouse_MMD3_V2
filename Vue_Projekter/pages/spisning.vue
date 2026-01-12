@@ -2,9 +2,9 @@
     import navigation from '~/components/navigation.vue';
     import Footer from '../components/Footer.vue'
 
-useHead ({
+useSeoMeta ({
   title: 'Spisning | Action House Funcenter',
-  meta: [{name: 'description', content: 'Bestil mad til din julefrokost, dag eller familietur hos Action House Funcenter i Løkken.'}]
+  description: 'Bestil mad til din julefrokost, dag eller familietur hos Action House Funcenter i Løkken.'
 });
 
 </script>

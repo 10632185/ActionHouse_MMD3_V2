@@ -3,9 +3,9 @@ import Header from '../components/navigation.vue'
 import Footer from '../components/Footer.vue'
 import FAQ from '../components/FAQ.vue'
 
-useHead ({
+useSeoMeta ({
   title: 'Aktiviteter | Action House Funcenter',
-  meta: [{name: 'description', content: 'Oplev sjove og actionfyldte aktiviteter som bowling, gokart, legeland og meget mere hos Action House Funcenter i Løkken.'}]
+  description: 'Oplev sjove og actionfyldte aktiviteter som bowling, gokart, legeland og meget mere hos Action House Funcenter i Løkken.'
 });
 
 import BowlingImg from '../assets/img/Bowling.webp'
