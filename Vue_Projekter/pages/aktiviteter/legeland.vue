@@ -12,6 +12,7 @@ import breadcrumbs from '../components/breadcrumbs.vue'
     src="../../assets/img/Legeland.webp"
     alt="Legeland hos Action House"
     class="hero-image"
+    loading="lazy"
   />
 
   <breadcrumbs />

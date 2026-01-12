@@ -12,6 +12,7 @@ import breadcrumbs from '../components/breadcrumbs.vue'
     src="../../assets/img/Lasergame.webp"
     alt="Lasergame hos Action House"
     class="lasergame-hero"
+    loading="lazy"
   />
 
   <breadcrumbs />

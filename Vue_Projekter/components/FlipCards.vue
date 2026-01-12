@@ -84,7 +84,7 @@ onUnmounted(() => {
       >
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img :src="card.image" alt="" />
+            <img :src="card.image" alt="billed af aktiviteten" loading="lazy"/>
             <div class="front-overlay">
               <div class="text-background"></div>
               <h3>{{ card.titleshow}}</h3>

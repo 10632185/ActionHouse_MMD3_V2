@@ -8,11 +8,7 @@ import breadcrumbs from '../components/breadcrumbs.vue'
 <template>
   <Header />
 
-  <img
-    src="../../assets/img/bowlingHeroIMG.webp"
-    alt="Bowling baner hos Action House"
-    class="bowling-hero"
-  />
+  <img src="../../assets/img/bowlingHeroIMG.webp" alt="Bowling baner hos Action House" class="bowling-hero" loading="lazy"/>
 
   <breadcrumbs />
 

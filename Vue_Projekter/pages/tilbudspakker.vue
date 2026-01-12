@@ -9,11 +9,7 @@ const activeCategory = ref('all')
 <template>
   <Header />
 
-  <img
-    src="../assets//img/tilbudsHero.webp"
-    alt="Tilbudspakker hos Action House"
-    class="gokart-hero"
-  />
+  <img src="../assets//img/tilbudsHero.webp" alt="Tilbudspakker hos Action House" loading="lazy" class="gokart-hero"/>
 
   <main class="gokart-page">
     <section class="gokart-intro">

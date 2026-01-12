@@ -7,7 +7,7 @@ import Footer from '../components/Footer.vue'
 <Navigation></Navigation>
 <section>
     <article>
-        <img src="../assets/img/kontaktHeader.png" alt="billeder af mennesker med gokart hjelm">
+        <img src="../assets/img/kontaktHeader.png" alt="billeder af mennesker med gokart hjelm" loading="lazy">
     </article>
 </section>
 <section class="kontaktContainer">
@@ -19,8 +19,8 @@ import Footer from '../components/Footer.vue'
         <div class="socialContainer">    
             <h2>Følg os på:</h2>
             <div>
-                <img src="../assets/img/facebook-logo.svg" alt="facebook logo">
-                <img src="../assets/img/X-logo.svg" alt="x logo">
+                <img src="../assets/img/facebook-logo.svg" alt="facebook logo" loading="lazy">
+                <img src="../assets/img/X-logo.svg" alt="x logo" loading="lazy">
             </div>
         </div>
     </article>

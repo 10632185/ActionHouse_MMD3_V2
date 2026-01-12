@@ -56,7 +56,7 @@ onUnmounted(() => {
   <nav class="nav">
     <div class="nav-logo">
       <NuxtLink to="/">
-        <img src="../assets/img/actionhouseLogo.webp" alt="Logo" />
+        <img src="../assets/img/actionhouseLogo.webp" alt="Logo" loading="lazy"/>
       </NuxtLink>
     </div>
 

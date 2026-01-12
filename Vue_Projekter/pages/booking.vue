@@ -8,7 +8,7 @@ import Footer from '../components/Footer.vue'
 <Navigation></Navigation>
 <section>
     <article class="bookingIntro">
-        <img src="../assets/img/bookingHeader.jpg" alt="billede af en der bowler">
+        <img src="../assets/img/bookingHeader.jpg" alt="billede af en der bowler" loading="lazy">
         <h1>Online booking</h1>
         <p>Online Booking er KUN en forespørgsel på arrangement. Vi vil sende dig en mail med bekræftelse af din bestilling hurtigst muligt, når den er gået igennem. Er der mindre end 24 timer til du ønsker at besøge os i højsæsoner (skoleferier) anbefaler vi at I ringer og booker i stedet .
         <br>

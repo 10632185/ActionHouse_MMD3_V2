@@ -16,7 +16,7 @@ import Footer from '../components/Footer.vue'
       loop
       playsinline
     >
-      <source src="../assets/vid/Action-house-1.1-II-_1_-_1_.mp4" type="video/mp4" />
+      <source src="../assets/vid/Action-house-1.1-II-_1_-_1_.mp4" type="video/mp4"/>
       Your browser does not support the video tag.
     </video>
   <div class="frontpageWrapper">
@@ -47,7 +47,7 @@ import Footer from '../components/Footer.vue'
         </div>
 
         <div class="omOsImage">
-          <img src="../assets/img/actionhouseFacade.webp" alt="">
+          <img src="../assets/img/actionhouseFacade.webp" alt="billede af Action House bygningen" loading="lazy">
         </div>
       </div>
 

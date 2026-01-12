@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-logo">
       <NuxtLink to="/">
-        <img src="../assets/img/actionhouseLogo.webp" alt="Logo" />
+        <img src="../assets/img/actionhouseLogo.webp" alt="Logo" loading="lazy"/>
       </NuxtLink>
     </div>
 

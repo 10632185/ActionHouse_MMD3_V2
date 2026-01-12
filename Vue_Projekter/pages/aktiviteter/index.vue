@@ -28,7 +28,7 @@ const slugify = title =>
 <template>
   <Header />
 
-  <img src="../../assets/img/Gokart.webp" alt="Gokart i action house" class="hero-video" />
+  <img src="../../assets/img/Gokart.webp" alt="Gokart i action house" class="hero-video" loading="lazy"/>
 
   <div class="aktiviteterWrapper">
     <section class="aktIntro">

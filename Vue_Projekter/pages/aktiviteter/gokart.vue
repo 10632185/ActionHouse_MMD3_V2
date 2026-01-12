@@ -12,6 +12,7 @@ import breadcrumbs from '../components/breadcrumbs.vue'
     src="../../assets/img/GokartKoersel.webp"
     alt="Gokart baner hos Action House"
     class="gokart-hero"
+    loading="lazy"
   />
 
   <breadcrumbs />
@@ -77,10 +78,10 @@ import breadcrumbs from '../components/breadcrumbs.vue'
         <li>Aldersgrænse: Man skal være fyldt 7 år og være 120 cm høj.</li>
         <li>Gokarts: Vi har 3 størrelser gokarts og det er udelukkende personalet der bestemmer hvilken man får tildelt.</li>
         <li>Bemærk: Ved grupper på under 20 personer kan der forekomme samkørsel med andre.</li>
-        <li>Sikkerhed: Alkohol før kørsel er ikke tilladt – personalet vurderer køreegnethed.</li>
+        <li>Sikkerhed: Alkohol før kørsel er ikke tilladt - personalet vurderer køreegnethed.</li>
         <li>Krav: Fuld førlighed i begge arme og ben, samt lukkede sko, ingen tørklæder eller løst hængende tøj.</li>
         <li>Instruktion: Alle får altid instruktion inden kørsel uanset hvor mange gange man har kørt.</li>
-        <li>Obligatorisk: Hvis ikke man har egen hjelm med skal man have balaclava/hjelmhue – disse kan købes hos os.</li>
+        <li>Obligatorisk: Hvis ikke man har egen hjelm med skal man have balaclava/hjelmhue - disse kan købes hos os.</li>
         <li>Ekstra udstyr: Kørehandsker kan tilkøbes for kun 35,- (str. S, M, L, XL)</li>
       </ul>
 

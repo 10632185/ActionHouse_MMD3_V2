@@ -69,7 +69,7 @@ const goToPage = (page) => {
           :key="index"
           class="gallery-card"
         >
-          <img :src="card.image" alt="" />
+          <img :src="card.image" alt="galleri billede" loading="lazy"/>
         </div>
       </div>
     </div>
