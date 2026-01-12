@@ -21,7 +21,7 @@ import Footer from '../components/Footer.vue'
     </video>
   <div class="frontpageWrapper">
     <section>
-      <h1 class="forsideTitles">Sjov og action for alle</h1>
+      <h1 class="forsideTitles">Sjov og action for alle!</h1>
       <p class="forsideParagraphs forsideMaxLength">
         Hos Action House i Løkken finder du et væld af sjove aktiviteter og oplevelser fordelt på 12.530 m².
         Længere nede på siden kan du læse om historien bag Action House Funcenter samt se en tidslinje for,
