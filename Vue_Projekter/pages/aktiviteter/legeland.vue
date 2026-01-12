@@ -3,6 +3,12 @@ import Header from '../components/navigation.vue'
 import Footer from '../components/Footer.vue'
 import Galleri from '../components/Galleri.vue'
 import breadcrumbs from '../components/breadcrumbs.vue'
+
+useHead ({
+  title: 'Legeland | Action House Funcenter',
+  meta: [{name: 'description', content: 'Sjovt og stort legeland for børn i alle aldre hos Action House Funcenter i Løkken.'}]
+});
+
 </script>
 
 <template>
