@@ -3,6 +3,12 @@ import Header from '../components/navigation.vue'
 import Footer from '../components/Footer.vue'
 import Galleri from '../components/Galleri.vue'
 import breadcrumbs from '../components/breadcrumbs.vue'
+
+useHead ({
+  title: 'Bowling | Action House Funcenter',
+  meta: [{name: 'description', content: 'Spil bowling på moderne bowlingbaner hos Action House Funcenter i Løkken.'}]
+});
+
 </script>
 
 <template>

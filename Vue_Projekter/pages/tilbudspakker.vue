@@ -4,6 +4,12 @@ import Header from '../components/navigation.vue'
 import Footer from '../components/Footer.vue'
 
 const activeCategory = ref('all')
+
+useHead ({
+  title: 'Tilbudspakker | Action House Funcenter',
+  meta: [{name: 'description', content: 'Læs mere om tilbudspakker til gokart, legeland, lasergame og meget mere hos Action House Funcenter i Løkken.'}]
+});
+
 </script>
 
 <template>
